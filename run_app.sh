@@ -53,7 +53,7 @@ case $device_choice in
         ;;
     4)
         echo "🤖 Запуск в Android Emulator..."
-        flutter run -d android
+        flutter run -d emulator-5554
         ;;
     *)
         echo "❌ Неверный выбор. Запускаю на macOS по умолчанию..."
