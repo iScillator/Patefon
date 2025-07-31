@@ -360,10 +360,10 @@
     "description": "Finish button"
   },
   "finish": "Zakończ",
-  "@continue": {
+  "@continueButton": {
     "description": "Continue button"
   },
-  "continue": "Kontynuuj",
+  "continueButton": "Kontynuuj",
   "@restart": {
     "description": "Restart button"
   },
