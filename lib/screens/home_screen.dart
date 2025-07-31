@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../services/localization_service.dart';
 import 'anatomy_screen.dart';
 import 'wardrobe_screen.dart';
 import 'experiment_screen.dart';
 import 'profile_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final LocalizationService localizationService;
+  
+  const HomeScreen({super.key, required this.localizationService});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Живая Кожа'),
+        title: Text(l10n.appTitle),
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.language),
+            onPressed: () => _showLanguageDialog(context),
+            tooltip: l10n.language,
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -35,7 +48,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 20),
               Text(
-                'Добро пожаловать в мир\nЖивой Кожи',
+                l10n.welcomeTitle,
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -43,7 +56,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                'Откройте секреты анатомии и влияние одежды на тело',
+                l10n.welcomeSubtitle,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: Colors.white70,
                 ),
@@ -57,9 +70,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     _buildMenuCard(
                       context,
-                      'Анатомия',
+                      l10n.anatomy,
                       Icons.science,
-                      'Изучите принципы работы нервных окончаний и волосков',
+                      l10n.anatomyDescription,
                       () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const AnatomyScreen()),
@@ -67,9 +80,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     _buildMenuCard(
                       context,
-                      'Гардероб',
+                      l10n.wardrobe,
                       Icons.checkroom,
-                      'Подберите идеальную одежду для вашего тела',
+                      l10n.wardrobeDescription,
                       () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const WardrobeScreen()),
@@ -77,9 +90,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     _buildMenuCard(
                       context,
-                      'Эксперимент',
+                      l10n.experiment,
                       Icons.fitness_center,
-                      'Проведите эксперимент с накачкой мышц',
+                      l10n.experimentDescription,
                       () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const ExperimentScreen()),
@@ -87,9 +100,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     _buildMenuCard(
                       context,
-                      'Профиль',
+                      l10n.profile,
                       Icons.person,
-                      'Ваши данные и прогресс',
+                      l10n.profileDescription,
                       () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const ProfileScreen()),
@@ -162,6 +175,48 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _showLanguageDialog(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final currentLanguage = localizationService.getCurrentLanguageCode();
+    final availableLanguages = localizationService.getAvailableLanguages();
+    
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(l10n.language),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: availableLanguages.length,
+              itemBuilder: (context, index) {
+                final language = availableLanguages[index];
+                final isSelected = language['code'] == currentLanguage || 
+                                 (language['code'] == 'system' && localizationService.isSystemLanguage);
+                
+                return ListTile(
+                  title: Text(language['name']!),
+                  trailing: isSelected ? const Icon(Icons.check, color: Colors.deepPurple) : null,
+                  onTap: () {
+                    localizationService.setLanguage(language['code']!);
+                    Navigator.of(context).pop();
+                  },
+                );
+              },
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(l10n.cancel),
+            ),
+          ],
+        );
+      },
     );
   }
 } 
