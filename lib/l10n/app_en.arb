@@ -28,5 +28,403 @@
   "loading": "Loading...",
   "noData": "No data available",
   "retry": "Retry",
-  "close": "Close"
+  "close": "Close",
+  
+  "@anatomyStep1Title": {
+    "description": "Title for anatomy step 1"
+  },
+  "anatomyStep1Title": "Body Hair",
+  "@anatomyStep1Description": {
+    "description": "Description for anatomy step 1"
+  },
+  "anatomyStep1Description": "The human body has millions of hairs. Each hair has a bulb and roots.",
+  "@anatomyStep2Title": {
+    "description": "Title for anatomy step 2"
+  },
+  "anatomyStep2Title": "Nerve Endings",
+  "@anatomyStep2Description": {
+    "description": "Description for anatomy step 2"
+  },
+  "anatomyStep2Description": "Millions of nerve endings run through the body, connected to the roots of DIFFERENT bulbs.",
+  "@anatomyStep3Title": {
+    "description": "Title for anatomy step 3"
+  },
+  "anatomyStep3Title": "Hologram",
+  "@anatomyStep3Description": {
+    "description": "Description for anatomy step 3"
+  },
+  "anatomyStep3Description": "The brain receives a hologram with a 3D model of what the body is placed in.",
+  "@anatomyStep4Title": {
+    "description": "Title for anatomy step 4"
+  },
+  "anatomyStep4Title": "Body Adaptation",
+  "@anatomyStep4Description": {
+    "description": "Description for anatomy step 4"
+  },
+  "anatomyStep4Description": "The brain adjusts the anatomy of the body (physical shell) to fit the clothing.",
+  "@anatomyStep5Title": {
+    "description": "Title for anatomy step 5"
+  },
+  "anatomyStep5Title": "Examples",
+  "@anatomyStep5Description": {
+    "description": "Description for anatomy step 5"
+  },
+  "anatomyStep5Description": "Watermelon in a cube → cubic watermelon\nFoot in tight shoes → deformed foot",
+  
+  "@comfortMode": {
+    "description": "Comfort mode label"
+  },
+  "comfortMode": "Comfort",
+  "@correctionMode": {
+    "description": "Correction mode label"
+  },
+  "correctionMode": "Correction",
+  "@allBodyParts": {
+    "description": "All body parts label"
+  },
+  "allBodyParts": "All",
+  "@topClothing": {
+    "description": "Top clothing label"
+  },
+  "topClothing": "Top",
+  "@bottomClothing": {
+    "description": "Bottom clothing label"
+  },
+  "bottomClothing": "Bottom",
+  "@comfortLevel": {
+    "description": "Comfort level label"
+  },
+  "comfortLevel": "Comfort Level",
+  "@correctionLevel": {
+    "description": "Correction level label"
+  },
+  "correctionLevel": "Correction Level",
+  
+  "@looseTshirt": {
+    "description": "Loose t-shirt item name"
+  },
+  "looseTshirt": "Loose T-shirt",
+  "@looseTshirtDescription": {
+    "description": "Loose t-shirt description"
+  },
+  "looseTshirtDescription": "Soft cotton fabric, doesn't restrict movement",
+  "@looseJeans": {
+    "description": "Loose jeans item name"
+  },
+  "looseJeans": "Loose Fit Jeans",
+  "@looseJeansDescription": {
+    "description": "Loose jeans description"
+  },
+  "looseJeansDescription": "Comfortable fit, doesn't press on stomach",
+  "@sportsShorts": {
+    "description": "Sports shorts item name"
+  },
+  "sportsShorts": "Sports Shorts",
+  "@sportsShortsDescription": {
+    "description": "Sports shorts description"
+  },
+  "sportsShortsDescription": "Maximum freedom of movement",
+  "@cottonShirt": {
+    "description": "Cotton shirt item name"
+  },
+  "cottonShirt": "Cotton Shirt",
+  "@cottonShirtDescription": {
+    "description": "Cotton shirt description"
+  },
+  "cottonShirtDescription": "Breathable fabric, classic cut",
+  "@compressionTank": {
+    "description": "Compression tank item name"
+  },
+  "compressionTank": "Compression Tank Top",
+  "@compressionTankDescription": {
+    "description": "Compression tank description"
+  },
+  "compressionTankDescription": "Corrects posture and supports muscles",
+  "@compressionLeggings": {
+    "description": "Compression leggings item name"
+  },
+  "compressionLeggings": "Compression Leggings",
+  "@compressionLeggingsDescription": {
+    "description": "Compression leggings description"
+  },
+  "compressionLeggingsDescription": "Improve blood circulation and muscle tone",
+  "@postureCorset": {
+    "description": "Posture corset item name"
+  },
+  "postureCorset": "Posture Corset",
+  "@postureCorsetDescription": {
+    "description": "Posture corset description"
+  },
+  "postureCorsetDescription": "Corrects posture and strengthens back",
+  "@sportsBra": {
+    "description": "Sports bra item name"
+  },
+  "sportsBra": "Sports Bra",
+  "@sportsBraDescription": {
+    "description": "Sports bra description"
+  },
+  "sportsBraDescription": "Supports chest during workouts",
+  
+  "@experimentTitle": {
+    "description": "Experiment screen title"
+  },
+  "experimentTitle": "Muscle Pumping Experiment",
+  "@experimentDescription": {
+    "description": "Experiment description"
+  },
+  "experimentDescription": "30-day experiment to strengthen muscles through clothing",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "Start Experiment",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "Complete Day",
+  "@experimentProgress": {
+    "description": "Experiment progress label"
+  },
+  "experimentProgress": "Progress",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "Day",
+  "@of": {
+    "description": "Of label"
+  },
+  "of": "of",
+  "@muscleProgress": {
+    "description": "Muscle progress label"
+  },
+  "muscleProgress": "Muscle Progress",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "Experiment Active",
+  "@experimentInactive": {
+    "description": "Experiment inactive status"
+  },
+  "experimentInactive": "Experiment Inactive",
+  "@daysCompleted": {
+    "description": "Days completed label"
+  },
+  "daysCompleted": "Days Completed",
+  "@clothingRecommendations": {
+    "description": "Clothing recommendations label"
+  },
+  "clothingRecommendations": "Clothing Recommendations",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "Notes",
+  "@addNote": {
+    "description": "Add note button"
+  },
+  "addNote": "Add Note",
+  "@editNote": {
+    "description": "Edit note button"
+  },
+  "editNote": "Edit Note",
+  
+  "@personalInfo": {
+    "description": "Personal info section title"
+  },
+  "personalInfo": "Personal Information",
+  "@name": {
+    "description": "Name label"
+  },
+  "name": "Name",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "Age",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "Height",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "Weight",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "Gender",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "Male",
+  "@female": {
+    "description": "Female gender"
+  },
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "Activity Level",
+  "@lowActivity": {
+    "description": "Low activity level"
+  },
+  "lowActivity": "Low",
+  "@moderateActivity": {
+    "description": "Moderate activity level"
+  },
+  "@highActivity": {
+    "description": "High activity level"
+  },
+  "highActivity": "High",
+  "@progressMetrics": {
+    "description": "Progress metrics section title"
+  },
+  "progressMetrics": "Progress Metrics",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "Muscle Mass",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "Fat Mass",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "Grip Strength",
+  "@current": {
+    "description": "Current value label"
+  },
+  "current": "Current",
+  "@target": {
+    "description": "Target value label"
+  },
+  "target": "Target",
+  "@kg": {
+    "description": "Kilogram unit"
+  },
+  "kg": "kg",
+  "@percent": {
+    "description": "Percent unit"
+  },
+  "percent": "%",
+  "@cm": {
+    "description": "Centimeter unit"
+  },
+  "cm": "cm",
+  "@years": {
+    "description": "Years unit"
+  },
+  "years": "years",
+  
+  "@editProfile": {
+    "description": "Edit profile button"
+  },
+  "editProfile": "Edit Profile",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "saveChanges": "Save Changes",
+  "@resetProgress": {
+    "description": "Reset progress button"
+  },
+  "resetProgress": "Reset Progress",
+  "@exportData": {
+    "description": "Export data button"
+  },
+  "exportData": "Export Data",
+  "@importData": {
+    "description": "Import data button"
+  },
+  "importData": "Import Data",
+  "@deleteAccount": {
+    "description": "Delete account button"
+  },
+  "deleteAccount": "Delete Account",
+  "@logout": {
+    "description": "Logout button"
+  },
+  "logout": "Logout",
+  
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "Next",
+  "@previous": {
+    "description": "Previous button"
+  },
+  "previous": "Previous",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "skip": "Skip",
+  "@finish": {
+    "description": "Finish button"
+  },
+  "finish": "Finish",
+  "@continue": {
+    "description": "Continue button"
+  },
+  "continue": "Continue",
+  "@restart": {
+    "description": "Restart button"
+  },
+  "restart": "Restart",
+  "@pause": {
+    "description": "Pause button"
+  },
+  "pause": "Pause",
+  "@resume": {
+    "description": "Resume button"
+  },
+  "resume": "Resume",
+  
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "selectLanguage": "Select Language",
+  "@systemLanguage": {
+    "description": "System language option"
+  },
+  "systemLanguage": "System",
+  "@russian": {
+    "description": "Russian language"
+  },
+  "russian": "Русский",
+  "@ukrainian": {
+    "description": "Ukrainian language"
+  },
+  "ukrainian": "Українська",
+  "@english": {
+    "description": "English language"
+  },
+  "english": "English",
+  "@burmese": {
+    "description": "Burmese language"
+  },
+  "burmese": "မြန်မာ",
+  "@chinese": {
+    "description": "Chinese language"
+  },
+  "chinese": "中文",
+  "@thai": {
+    "description": "Thai language"
+  },
+  "thai": "ไทย",
+  "@hindi": {
+    "description": "Hindi language"
+  },
+  "hindi": "हिन्दी",
+  "@arabic": {
+    "description": "Arabic language"
+  },
+  "arabic": "العربية",
+  "@german": {
+    "description": "German language"
+  },
+  "german": "Deutsch",
+  "@khmer": {
+    "description": "Khmer language"
+  },
+  "khmer": "ខ្មែរ",
+  "@polish": {
+    "description": "Polish language"
+  },
+  "polish": "Polski"
 } 

@@ -28,5 +28,405 @@
   "loading": "Загрузка...",
   "noData": "Данные недоступны",
   "retry": "Повторить",
-  "close": "Закрыть"
+  "close": "Закрыть",
+  
+  "@anatomyStep1Title": {
+    "description": "Title for anatomy step 1"
+  },
+  "anatomyStep1Title": "Волоски на теле",
+  "@anatomyStep1Description": {
+    "description": "Description for anatomy step 1"
+  },
+  "anatomyStep1Description": "На теле человека находится миллионы волосков. Каждый волосок имеет луковицу и корни.",
+  "@anatomyStep2Title": {
+    "description": "Title for anatomy step 2"
+  },
+  "anatomyStep2Title": "Нервные окончания",
+  "@anatomyStep2Description": {
+    "description": "Description for anatomy step 2"
+  },
+  "anatomyStep2Description": "По телу проходят миллионы нервных окончаний, которые соединены с корнями РАЗНЫХ луковиц.",
+  "@anatomyStep3Title": {
+    "description": "Title for anatomy step 3"
+  },
+  "anatomyStep3Title": "Голограмма",
+  "@anatomyStep3Description": {
+    "description": "Description for anatomy step 3"
+  },
+  "anatomyStep3Description": "От волоска мозг получает голограмму с 3D моделью того, во что помещено тело.",
+  "@anatomyStep4Title": {
+    "description": "Title for anatomy step 4"
+  },
+  "anatomyStep4Title": "Адаптация тела",
+  "@anatomyStep4Description": {
+    "description": "Description for anatomy step 4"
+  },
+  "anatomyStep4Description": "Мозг подстраивает анатомию тела (физической оболочки) под одежду.",
+  "@anatomyStep5Title": {
+    "description": "Title for anatomy step 5"
+  },
+  "anatomyStep5Title": "Примеры",
+  "@anatomyStep5Description": {
+    "description": "Description for anatomy step 5"
+  },
+  "anatomyStep5Description": "Арбуз в кубе → кубический арбуз\nНога в узкой обуви → деформированная стопа",
+  
+  "@comfortMode": {
+    "description": "Comfort mode label"
+  },
+  "comfortMode": "Комфорт",
+  "@correctionMode": {
+    "description": "Correction mode label"
+  },
+  "correctionMode": "Коррекция",
+  "@allBodyParts": {
+    "description": "All body parts label"
+  },
+  "allBodyParts": "Все",
+  "@topClothing": {
+    "description": "Top clothing label"
+  },
+  "topClothing": "Верх",
+  "@bottomClothing": {
+    "description": "Bottom clothing label"
+  },
+  "bottomClothing": "Низ",
+  "@comfortLevel": {
+    "description": "Comfort level label"
+  },
+  "comfortLevel": "Уровень комфорта",
+  "@correctionLevel": {
+    "description": "Correction level label"
+  },
+  "correctionLevel": "Уровень коррекции",
+  
+  "@looseTshirt": {
+    "description": "Loose t-shirt item name"
+  },
+  "looseTshirt": "Свободная футболка",
+  "@looseTshirtDescription": {
+    "description": "Loose t-shirt description"
+  },
+  "looseTshirtDescription": "Мягкая хлопковая ткань, не сковывает движения",
+  "@looseJeans": {
+    "description": "Loose jeans item name"
+  },
+  "looseJeans": "Джинсы свободного кроя",
+  "@looseJeansDescription": {
+    "description": "Loose jeans description"
+  },
+  "looseJeansDescription": "Комфортная посадка, не давит на живот",
+  "@sportsShorts": {
+    "description": "Sports shorts item name"
+  },
+  "sportsShorts": "Спортивные шорты",
+  "@sportsShortsDescription": {
+    "description": "Sports shorts description"
+  },
+  "sportsShortsDescription": "Максимальная свобода движений",
+  "@cottonShirt": {
+    "description": "Cotton shirt item name"
+  },
+  "cottonShirt": "Хлопковая рубашка",
+  "@cottonShirtDescription": {
+    "description": "Cotton shirt description"
+  },
+  "cottonShirtDescription": "Дышащая ткань, классический крой",
+  "@compressionTank": {
+    "description": "Compression tank item name"
+  },
+  "compressionTank": "Утягивающая майка",
+  "@compressionTankDescription": {
+    "description": "Compression tank description"
+  },
+  "compressionTankDescription": "Корректирует осанку и поддерживает мышцы",
+  "@compressionLeggings": {
+    "description": "Compression leggings item name"
+  },
+  "compressionLeggings": "Компрессионные леггинсы",
+  "@compressionLeggingsDescription": {
+    "description": "Compression leggings description"
+  },
+  "compressionLeggingsDescription": "Улучшают кровообращение и тонус мышц",
+  "@postureCorset": {
+    "description": "Posture corset item name"
+  },
+  "postureCorset": "Корсет для осанки",
+  "@postureCorsetDescription": {
+    "description": "Posture corset description"
+  },
+  "postureCorsetDescription": "Исправляет осанку и укрепляет спину",
+  "@sportsBra": {
+    "description": "Sports bra item name"
+  },
+  "sportsBra": "Спортивный бюстгальтер",
+  "@sportsBraDescription": {
+    "description": "Sports bra description"
+  },
+  "sportsBraDescription": "Поддерживает грудь во время тренировок",
+  
+  "@experimentTitle": {
+    "description": "Experiment screen title"
+  },
+  "experimentTitle": "Эксперимент с накачкой мышц",
+  "@experimentDescription": {
+    "description": "Experiment description"
+  },
+  "experimentDescription": "30-дневный эксперимент по укреплению мышц через одежду",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "Начать эксперимент",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "Завершить день",
+  "@experimentProgress": {
+    "description": "Experiment progress label"
+  },
+  "experimentProgress": "Прогресс",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "День",
+  "@of": {
+    "description": "Of label"
+  },
+  "of": "из",
+  "@muscleProgress": {
+    "description": "Muscle progress label"
+  },
+  "muscleProgress": "Прогресс мышц",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "Эксперимент активен",
+  "@experimentInactive": {
+    "description": "Experiment inactive status"
+  },
+  "experimentInactive": "Эксперимент неактивен",
+  "@daysCompleted": {
+    "description": "Days completed label"
+  },
+  "daysCompleted": "Дней завершено",
+  "@clothingRecommendations": {
+    "description": "Clothing recommendations label"
+  },
+  "clothingRecommendations": "Рекомендации по одежде",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "Заметки",
+  "@addNote": {
+    "description": "Add note button"
+  },
+  "addNote": "Добавить заметку",
+  "@editNote": {
+    "description": "Edit note button"
+  },
+  "editNote": "Редактировать заметку",
+  
+  "@personalInfo": {
+    "description": "Personal info section title"
+  },
+  "personalInfo": "Личная информация",
+  "@name": {
+    "description": "Name label"
+  },
+  "name": "Имя",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "Возраст",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "Рост",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "Вес",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "Пол",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "Мужской",
+  "@female": {
+    "description": "Female gender"
+  },
+  "female": "Женский",
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "Уровень активности",
+  "@lowActivity": {
+    "description": "Low activity level"
+  },
+  "lowActivity": "Низкий",
+  "@moderateActivity": {
+    "description": "Moderate activity level"
+  },
+  "moderateActivity": "Средний",
+  "@highActivity": {
+    "description": "High activity level"
+  },
+  "highActivity": "Высокий",
+  "@progressMetrics": {
+    "description": "Progress metrics section title"
+  },
+  "progressMetrics": "Метрики прогресса",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "Мышечная масса",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "Жировая масса",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "Сила хвата",
+  "@current": {
+    "description": "Current value label"
+  },
+  "current": "Текущее",
+  "@target": {
+    "description": "Target value label"
+  },
+  "target": "Цель",
+  "@kg": {
+    "description": "Kilogram unit"
+  },
+  "kg": "кг",
+  "@percent": {
+    "description": "Percent unit"
+  },
+  "percent": "%",
+  "@cm": {
+    "description": "Centimeter unit"
+  },
+  "cm": "см",
+  "@years": {
+    "description": "Years unit"
+  },
+  "years": "лет",
+  
+  "@editProfile": {
+    "description": "Edit profile button"
+  },
+  "editProfile": "Редактировать профиль",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "saveChanges": "Сохранить изменения",
+  "@resetProgress": {
+    "description": "Reset progress button"
+  },
+  "resetProgress": "Сбросить прогресс",
+  "@exportData": {
+    "description": "Export data button"
+  },
+  "exportData": "Экспорт данных",
+  "@importData": {
+    "description": "Import data button"
+  },
+  "importData": "Импорт данных",
+  "@deleteAccount": {
+    "description": "Delete account button"
+  },
+  "deleteAccount": "Удалить аккаунт",
+  "@logout": {
+    "description": "Logout button"
+  },
+  "logout": "Выйти",
+  
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "Далее",
+  "@previous": {
+    "description": "Previous button"
+  },
+  "previous": "Назад",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "skip": "Пропустить",
+  "@finish": {
+    "description": "Finish button"
+  },
+  "finish": "Завершить",
+  "@continue": {
+    "description": "Continue button"
+  },
+  "continue": "Продолжить",
+  "@restart": {
+    "description": "Restart button"
+  },
+  "restart": "Перезапустить",
+  "@pause": {
+    "description": "Pause button"
+  },
+  "pause": "Пауза",
+  "@resume": {
+    "description": "Resume button"
+  },
+  "resume": "Возобновить",
+  
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "selectLanguage": "Выбрать язык",
+  "@systemLanguage": {
+    "description": "System language option"
+  },
+  "systemLanguage": "Системный",
+  "@russian": {
+    "description": "Russian language"
+  },
+  "russian": "Русский",
+  "@ukrainian": {
+    "description": "Ukrainian language"
+  },
+  "ukrainian": "Українська",
+  "@english": {
+    "description": "English language"
+  },
+  "english": "English",
+  "@burmese": {
+    "description": "Burmese language"
+  },
+  "burmese": "မြန်မာ",
+  "@chinese": {
+    "description": "Chinese language"
+  },
+  "chinese": "中文",
+  "@thai": {
+    "description": "Thai language"
+  },
+  "thai": "ไทย",
+  "@hindi": {
+    "description": "Hindi language"
+  },
+  "hindi": "हिन्दी",
+  "@arabic": {
+    "description": "Arabic language"
+  },
+  "arabic": "العربية",
+  "@german": {
+    "description": "German language"
+  },
+  "german": "Deutsch",
+  "@khmer": {
+    "description": "Khmer language"
+  },
+  "khmer": "ខ្មែរ",
+  "@polish": {
+    "description": "Polish language"
+  },
+  "polish": "Polski"
 } 

@@ -28,5 +28,405 @@
   "loading": "加载中...",
   "noData": "暂无数据",
   "retry": "重试",
-  "close": "关闭"
+  "close": "关闭",
+  
+  "@anatomyStep1Title": {
+    "description": "Title for anatomy step 1"
+  },
+  "anatomyStep1Title": "体毛",
+  "@anatomyStep1Description": {
+    "description": "Description for anatomy step 1"
+  },
+  "anatomyStep1Description": "人体有数百万根毛发。每根毛发都有毛囊和根部。",
+  "@anatomyStep2Title": {
+    "description": "Title for anatomy step 2"
+  },
+  "anatomyStep2Title": "神经末梢",
+  "@anatomyStep2Description": {
+    "description": "Description for anatomy step 2"
+  },
+  "anatomyStep2Description": "数百万神经末梢遍布全身，连接到不同毛囊的根部。",
+  "@anatomyStep3Title": {
+    "description": "Title for anatomy step 3"
+  },
+  "anatomyStep3Title": "全息图",
+  "@anatomyStep3Description": {
+    "description": "Description for anatomy step 3"
+  },
+  "anatomyStep3Description": "大脑从毛发接收到身体所处环境的3D模型全息图。",
+  "@anatomyStep4Title": {
+    "description": "Title for anatomy step 4"
+  },
+  "anatomyStep4Title": "身体适应",
+  "@anatomyStep4Description": {
+    "description": "Description for anatomy step 4"
+  },
+  "anatomyStep4Description": "大脑调整身体解剖结构（物理外壳）以适应服装。",
+  "@anatomyStep5Title": {
+    "description": "Title for anatomy step 5"
+  },
+  "anatomyStep5Title": "例子",
+  "@anatomyStep5Description": {
+    "description": "Description for anatomy step 5"
+  },
+  "anatomyStep5Description": "立方体中的西瓜 → 立方体西瓜\n紧鞋中的脚 → 变形的脚",
+  
+  "@comfortMode": {
+    "description": "Comfort mode label"
+  },
+  "comfortMode": "舒适",
+  "@correctionMode": {
+    "description": "Correction mode label"
+  },
+  "correctionMode": "矫正",
+  "@allBodyParts": {
+    "description": "All body parts label"
+  },
+  "allBodyParts": "全部",
+  "@topClothing": {
+    "description": "Top clothing label"
+  },
+  "topClothing": "上衣",
+  "@bottomClothing": {
+    "description": "Bottom clothing label"
+  },
+  "bottomClothing": "下装",
+  "@comfortLevel": {
+    "description": "Comfort level label"
+  },
+  "comfortLevel": "舒适度",
+  "@correctionLevel": {
+    "description": "Correction level label"
+  },
+  "correctionLevel": "矫正度",
+  
+  "@looseTshirt": {
+    "description": "Loose t-shirt item name"
+  },
+  "looseTshirt": "宽松T恤",
+  "@looseTshirtDescription": {
+    "description": "Loose t-shirt description"
+  },
+  "looseTshirtDescription": "柔软棉质面料，不限制运动",
+  "@looseJeans": {
+    "description": "Loose jeans item name"
+  },
+  "looseJeans": "宽松牛仔裤",
+  "@looseJeansDescription": {
+    "description": "Loose jeans description"
+  },
+  "looseJeansDescription": "舒适版型，不压迫腹部",
+  "@sportsShorts": {
+    "description": "Sports shorts item name"
+  },
+  "sportsShorts": "运动短裤",
+  "@sportsShortsDescription": {
+    "description": "Sports shorts description"
+  },
+  "sportsShortsDescription": "最大运动自由度",
+  "@cottonShirt": {
+    "description": "Cotton shirt item name"
+  },
+  "cottonShirt": "棉质衬衫",
+  "@cottonShirtDescription": {
+    "description": "Cotton shirt description"
+  },
+  "cottonShirtDescription": "透气面料，经典剪裁",
+  "@compressionTank": {
+    "description": "Compression tank item name"
+  },
+  "compressionTank": "紧身背心",
+  "@compressionTankDescription": {
+    "description": "Compression tank description"
+  },
+  "compressionTankDescription": "矫正姿势并支撑肌肉",
+  "@compressionLeggings": {
+    "description": "Compression leggings item name"
+  },
+  "compressionLeggings": "紧身裤",
+  "@compressionLeggingsDescription": {
+    "description": "Compression leggings description"
+  },
+  "compressionLeggingsDescription": "改善血液循环和肌肉张力",
+  "@postureCorset": {
+    "description": "Posture corset item name"
+  },
+  "postureCorset": "姿势矫正器",
+  "@postureCorsetDescription": {
+    "description": "Posture corset description"
+  },
+  "postureCorsetDescription": "矫正姿势并强化背部",
+  "@sportsBra": {
+    "description": "Sports bra item name"
+  },
+  "sportsBra": "运动胸罩",
+  "@sportsBraDescription": {
+    "description": "Sports bra description"
+  },
+  "sportsBraDescription": "运动时支撑胸部",
+  
+  "@experimentTitle": {
+    "description": "Experiment screen title"
+  },
+  "experimentTitle": "肌肉锻炼实验",
+  "@experimentDescription": {
+    "description": "Experiment description"
+  },
+  "experimentDescription": "30天通过服装强化肌肉的实验",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "开始实验",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "完成一天",
+  "@experimentProgress": {
+    "description": "Experiment progress label"
+  },
+  "experimentProgress": "进度",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "天",
+  "@of": {
+    "description": "Of label"
+  },
+  "of": "共",
+  "@muscleProgress": {
+    "description": "Muscle progress label"
+  },
+  "muscleProgress": "肌肉进度",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "实验进行中",
+  "@experimentInactive": {
+    "description": "Experiment inactive status"
+  },
+  "experimentInactive": "实验未开始",
+  "@daysCompleted": {
+    "description": "Days completed label"
+  },
+  "daysCompleted": "已完成天数",
+  "@clothingRecommendations": {
+    "description": "Clothing recommendations label"
+  },
+  "clothingRecommendations": "服装推荐",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "笔记",
+  "@addNote": {
+    "description": "Add note button"
+  },
+  "addNote": "添加笔记",
+  "@editNote": {
+    "description": "Edit note button"
+  },
+  "editNote": "编辑笔记",
+  
+  "@personalInfo": {
+    "description": "Personal info section title"
+  },
+  "personalInfo": "个人信息",
+  "@name": {
+    "description": "Name label"
+  },
+  "name": "姓名",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "年龄",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "身高",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "体重",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "性别",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "男性",
+  "@female": {
+    "description": "Female gender"
+  },
+  "female": "女性",
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "活动水平",
+  "@lowActivity": {
+    "description": "Low activity level"
+  },
+  "lowActivity": "低",
+  "@moderateActivity": {
+    "description": "Moderate activity level"
+  },
+  "moderateActivity": "中",
+  "@highActivity": {
+    "description": "High activity level"
+  },
+  "highActivity": "高",
+  "@progressMetrics": {
+    "description": "Progress metrics section title"
+  },
+  "progressMetrics": "进度指标",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "肌肉质量",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "脂肪质量",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "握力",
+  "@current": {
+    "description": "Current value label"
+  },
+  "current": "当前",
+  "@target": {
+    "description": "Target value label"
+  },
+  "target": "目标",
+  "@kg": {
+    "description": "Kilogram unit"
+  },
+  "kg": "公斤",
+  "@percent": {
+    "description": "Percent unit"
+  },
+  "percent": "%",
+  "@cm": {
+    "description": "Centimeter unit"
+  },
+  "cm": "厘米",
+  "@years": {
+    "description": "Years unit"
+  },
+  "years": "岁",
+  
+  "@editProfile": {
+    "description": "Edit profile button"
+  },
+  "editProfile": "编辑资料",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "saveChanges": "保存更改",
+  "@resetProgress": {
+    "description": "Reset progress button"
+  },
+  "resetProgress": "重置进度",
+  "@exportData": {
+    "description": "Export data button"
+  },
+  "exportData": "导出数据",
+  "@importData": {
+    "description": "Import data button"
+  },
+  "importData": "导入数据",
+  "@deleteAccount": {
+    "description": "Delete account button"
+  },
+  "deleteAccount": "删除账户",
+  "@logout": {
+    "description": "Logout button"
+  },
+  "logout": "退出登录",
+  
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "下一步",
+  "@previous": {
+    "description": "Previous button"
+  },
+  "previous": "上一步",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "skip": "跳过",
+  "@finish": {
+    "description": "Finish button"
+  },
+  "finish": "完成",
+  "@continue": {
+    "description": "Continue button"
+  },
+  "continue": "继续",
+  "@restart": {
+    "description": "Restart button"
+  },
+  "restart": "重新开始",
+  "@pause": {
+    "description": "Pause button"
+  },
+  "pause": "暂停",
+  "@resume": {
+    "description": "Resume button"
+  },
+  "resume": "恢复",
+  
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "selectLanguage": "选择语言",
+  "@systemLanguage": {
+    "description": "System language option"
+  },
+  "systemLanguage": "系统",
+  "@russian": {
+    "description": "Russian language"
+  },
+  "russian": "Русский",
+  "@ukrainian": {
+    "description": "Ukrainian language"
+  },
+  "ukrainian": "Українська",
+  "@english": {
+    "description": "English language"
+  },
+  "english": "English",
+  "@burmese": {
+    "description": "Burmese language"
+  },
+  "burmese": "မြန်မာ",
+  "@chinese": {
+    "description": "Chinese language"
+  },
+  "chinese": "中文",
+  "@thai": {
+    "description": "Thai language"
+  },
+  "thai": "ไทย",
+  "@hindi": {
+    "description": "Hindi language"
+  },
+  "hindi": "हिन्दी",
+  "@arabic": {
+    "description": "Arabic language"
+  },
+  "arabic": "العربية",
+  "@german": {
+    "description": "German language"
+  },
+  "german": "Deutsch",
+  "@khmer": {
+    "description": "Khmer language"
+  },
+  "khmer": "ខ្មែរ",
+  "@polish": {
+    "description": "Polish language"
+  },
+  "polish": "Polski"
 } 

@@ -4,11 +4,11 @@
   "welcomeTitle": "Witamy w świecie\nŻywej Skóry",
   "welcomeSubtitle": "Odkryj sekrety anatomii i wpływ ubrania na ciało",
   "anatomy": "Anatomia",
-  "anatomyDescription": "Studiuj zasady zakończeń nerwowych i mieszków włosowych",
+  "anatomyDescription": "Poznaj zasady działania zakończeń nerwowych i mieszków włosowych",
   "wardrobe": "Garderoba",
   "wardrobeDescription": "Wybierz idealne ubranie dla swojego ciała",
   "experiment": "Eksperyment",
-  "experimentDescription": "Przeprowadź eksperyment z pompą mięśniową",
+  "experimentDescription": "Przeprowadź eksperyment z pompką mięśniową",
   "profile": "Profil",
   "profileDescription": "Twoje dane i postęp",
   "settings": "Ustawienia",
@@ -26,7 +26,407 @@
   "error": "Błąd",
   "success": "Sukces",
   "loading": "Ładowanie...",
-  "noData": "Brak danych",
+  "noData": "Brak dostępnych danych",
   "retry": "Ponów",
-  "close": "Zamknij"
+  "close": "Zamknij",
+  
+  "@anatomyStep1Title": {
+    "description": "Title for anatomy step 1"
+  },
+  "anatomyStep1Title": "Włosy na ciele",
+  "@anatomyStep1Description": {
+    "description": "Description for anatomy step 1"
+  },
+  "anatomyStep1Description": "Na ciele człowieka znajdują się miliony włosów. Każdy włos ma cebulkę i korzenie.",
+  "@anatomyStep2Title": {
+    "description": "Title for anatomy step 2"
+  },
+  "anatomyStep2Title": "Zakończenia nerwowe",
+  "@anatomyStep2Description": {
+    "description": "Description for anatomy step 2"
+  },
+  "anatomyStep2Description": "Przez ciało przechodzą miliony zakończeń nerwowych połączonych z korzeniami RÓŻNYCH cebulek.",
+  "@anatomyStep3Title": {
+    "description": "Title for anatomy step 3"
+  },
+  "anatomyStep3Title": "Hologram",
+  "@anatomyStep3Description": {
+    "description": "Description for anatomy step 3"
+  },
+  "anatomyStep3Description": "Od włosa mózg otrzymuje hologram z modelem 3D tego, w co umieszczone jest ciało.",
+  "@anatomyStep4Title": {
+    "description": "Title for anatomy step 4"
+  },
+  "anatomyStep4Title": "Adaptacja ciała",
+  "@anatomyStep4Description": {
+    "description": "Description for anatomy step 4"
+  },
+  "anatomyStep4Description": "Mózg dostosowuje anatomię ciała (fizycznej powłoki) do ubrania.",
+  "@anatomyStep5Title": {
+    "description": "Title for anatomy step 5"
+  },
+  "anatomyStep5Title": "Przykłady",
+  "@anatomyStep5Description": {
+    "description": "Description for anatomy step 5"
+  },
+  "anatomyStep5Description": "Arbuz w sześcianie → sześcienny arbuz\nStopa w ciasnych butach → zdeformowana stopa",
+  
+  "@comfortMode": {
+    "description": "Comfort mode label"
+  },
+  "comfortMode": "Komfort",
+  "@correctionMode": {
+    "description": "Correction mode label"
+  },
+  "correctionMode": "Korekta",
+  "@allBodyParts": {
+    "description": "All body parts label"
+  },
+  "allBodyParts": "Wszystkie",
+  "@topClothing": {
+    "description": "Top clothing label"
+  },
+  "topClothing": "Góra",
+  "@bottomClothing": {
+    "description": "Bottom clothing label"
+  },
+  "bottomClothing": "Dół",
+  "@comfortLevel": {
+    "description": "Comfort level label"
+  },
+  "comfortLevel": "Poziom komfortu",
+  "@correctionLevel": {
+    "description": "Correction level label"
+  },
+  "correctionLevel": "Poziom korekcji",
+  
+  "@looseTshirt": {
+    "description": "Loose t-shirt item name"
+  },
+  "looseTshirt": "Luźna koszulka",
+  "@looseTshirtDescription": {
+    "description": "Loose t-shirt description"
+  },
+  "looseTshirtDescription": "Miękka bawełniana tkanina, nie ogranicza ruchów",
+  "@looseJeans": {
+    "description": "Loose jeans item name"
+  },
+  "looseJeans": "Luźne dżinsy",
+  "@looseJeansDescription": {
+    "description": "Loose jeans description"
+  },
+  "looseJeansDescription": "Wygodny fason, nie uciska brzucha",
+  "@sportsShorts": {
+    "description": "Sports shorts item name"
+  },
+  "sportsShorts": "Spodenki sportowe",
+  "@sportsShortsDescription": {
+    "description": "Sports shorts description"
+  },
+  "sportsShortsDescription": "Maksymalna swoboda ruchów",
+  "@cottonShirt": {
+    "description": "Cotton shirt item name"
+  },
+  "cottonShirt": "Bawełniana koszula",
+  "@cottonShirtDescription": {
+    "description": "Cotton shirt description"
+  },
+  "cottonShirtDescription": "Przewiewna tkanina, klasyczny krój",
+  "@compressionTank": {
+    "description": "Compression tank item name"
+  },
+  "compressionTank": "Obcisły top",
+  "@compressionTankDescription": {
+    "description": "Compression tank description"
+  },
+  "compressionTankDescription": "Koryguje postawę i wspiera mięśnie",
+  "@compressionLeggings": {
+    "description": "Compression leggings item name"
+  },
+  "compressionLeggings": "Legginsy kompresyjne",
+  "@compressionLeggingsDescription": {
+    "description": "Compression leggings description"
+  },
+  "compressionLeggingsDescription": "Poprawiają krążenie krwi i napięcie mięśni",
+  "@postureCorset": {
+    "description": "Posture corset item name"
+  },
+  "postureCorset": "Gorset na postawę",
+  "@postureCorsetDescription": {
+    "description": "Posture corset description"
+  },
+  "postureCorsetDescription": "Poprawia postawę i wzmacnia plecy",
+  "@sportsBra": {
+    "description": "Sports bra item name"
+  },
+  "sportsBra": "Stanik sportowy",
+  "@sportsBraDescription": {
+    "description": "Sports bra description"
+  },
+  "sportsBraDescription": "Wspiera biust podczas treningów",
+  
+  "@experimentTitle": {
+    "description": "Experiment screen title"
+  },
+  "experimentTitle": "Eksperyment z pompką mięśniową",
+  "@experimentDescription": {
+    "description": "Experiment description"
+  },
+  "experimentDescription": "30-dniowy eksperyment wzmacniania mięśni przez ubranie",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "Rozpocznij eksperyment",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "Zakończ dzień",
+  "@experimentProgress": {
+    "description": "Experiment progress label"
+  },
+  "experimentProgress": "Postęp",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "Dzień",
+  "@of": {
+    "description": "Of label"
+  },
+  "of": "z",
+  "@muscleProgress": {
+    "description": "Muscle progress label"
+  },
+  "muscleProgress": "Postęp mięśni",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "Eksperyment aktywny",
+  "@experimentInactive": {
+    "description": "Experiment inactive status"
+  },
+  "experimentInactive": "Eksperyment nieaktywny",
+  "@daysCompleted": {
+    "description": "Days completed label"
+  },
+  "daysCompleted": "Dni ukończonych",
+  "@clothingRecommendations": {
+    "description": "Clothing recommendations label"
+  },
+  "clothingRecommendations": "Rekomendacje ubraniowe",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "Notatki",
+  "@addNote": {
+    "description": "Add note button"
+  },
+  "addNote": "Dodaj notatkę",
+  "@editNote": {
+    "description": "Edit note button"
+  },
+  "editNote": "Edytuj notatkę",
+  
+  "@personalInfo": {
+    "description": "Personal info section title"
+  },
+  "personalInfo": "Informacje osobiste",
+  "@name": {
+    "description": "Name label"
+  },
+  "name": "Imię",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "Wiek",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "Wzrost",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "Waga",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "Płeć",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "Męska",
+  "@female": {
+    "description": "Female gender"
+  },
+  "female": "Żeńska",
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "Poziom aktywności",
+  "@lowActivity": {
+    "description": "Low activity level"
+  },
+  "lowActivity": "Niski",
+  "@moderateActivity": {
+    "description": "Moderate activity level"
+  },
+  "moderateActivity": "Średni",
+  "@highActivity": {
+    "description": "High activity level"
+  },
+  "highActivity": "Wysoki",
+  "@progressMetrics": {
+    "description": "Progress metrics section title"
+  },
+  "progressMetrics": "Metryki postępu",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "Masa mięśniowa",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "Masa tłuszczowa",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "Siła chwytu",
+  "@current": {
+    "description": "Current value label"
+  },
+  "current": "Aktualne",
+  "@target": {
+    "description": "Target value label"
+  },
+  "target": "Cel",
+  "@kg": {
+    "description": "Kilogram unit"
+  },
+  "kg": "kg",
+  "@percent": {
+    "description": "Percent unit"
+  },
+  "percent": "%",
+  "@cm": {
+    "description": "Centimeter unit"
+  },
+  "cm": "cm",
+  "@years": {
+    "description": "Years unit"
+  },
+  "years": "lat",
+  
+  "@editProfile": {
+    "description": "Edit profile button"
+  },
+  "editProfile": "Edytuj profil",
+  "@saveChanges": {
+    "description": "Save changes button"
+  },
+  "saveChanges": "Zapisz zmiany",
+  "@resetProgress": {
+    "description": "Reset progress button"
+  },
+  "resetProgress": "Zresetuj postęp",
+  "@exportData": {
+    "description": "Export data button"
+  },
+  "exportData": "Eksportuj dane",
+  "@importData": {
+    "description": "Import data button"
+  },
+  "importData": "Importuj dane",
+  "@deleteAccount": {
+    "description": "Delete account button"
+  },
+  "deleteAccount": "Usuń konto",
+  "@logout": {
+    "description": "Logout button"
+  },
+  "logout": "Wyloguj",
+  
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "Dalej",
+  "@previous": {
+    "description": "Previous button"
+  },
+  "previous": "Wstecz",
+  "@skip": {
+    "description": "Skip button"
+  },
+  "skip": "Pomiń",
+  "@finish": {
+    "description": "Finish button"
+  },
+  "finish": "Zakończ",
+  "@continue": {
+    "description": "Continue button"
+  },
+  "continue": "Kontynuuj",
+  "@restart": {
+    "description": "Restart button"
+  },
+  "restart": "Uruchom ponownie",
+  "@pause": {
+    "description": "Pause button"
+  },
+  "pause": "Pauza",
+  "@resume": {
+    "description": "Resume button"
+  },
+  "resume": "Wznów",
+  
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "selectLanguage": "Wybierz język",
+  "@systemLanguage": {
+    "description": "System language option"
+  },
+  "systemLanguage": "System",
+  "@russian": {
+    "description": "Russian language"
+  },
+  "russian": "Русский",
+  "@ukrainian": {
+    "description": "Ukrainian language"
+  },
+  "ukrainian": "Українська",
+  "@english": {
+    "description": "English language"
+  },
+  "english": "English",
+  "@burmese": {
+    "description": "Burmese language"
+  },
+  "burmese": "မြန်မာ",
+  "@chinese": {
+    "description": "Chinese language"
+  },
+  "chinese": "中文",
+  "@thai": {
+    "description": "Thai language"
+  },
+  "thai": "ไทย",
+  "@hindi": {
+    "description": "Hindi language"
+  },
+  "hindi": "हिन्दी",
+  "@arabic": {
+    "description": "Arabic language"
+  },
+  "arabic": "العربية",
+  "@german": {
+    "description": "German language"
+  },
+  "german": "Deutsch",
+  "@khmer": {
+    "description": "Khmer language"
+  },
+  "khmer": "ខ្មែរ",
+  "@polish": {
+    "description": "Polish language"
+  },
+  "polish": "Polski"
 } 
