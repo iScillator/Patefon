@@ -99,6 +99,19 @@
     "description": "Correction level label"
   },
   "correctionLevel": "Correction Level",
+  "scanClothing": "Scan Clothing",
+  "startScanning": "Start Scanning",
+  "stopScanning": "Stop Scanning",
+  "addToWardrobe": "Add to Wardrobe",
+  "scanningClothing": "Scanning clothing...",
+  "clothingDetected": "Clothing detected",
+  "scanInstructions": "Point camera at clothing to scan",
+  "processingItems": "Processing items...",
+  "itemsAddedToWardrobe": "Items added to wardrobe",
+  "scanningError": "Scanning error",
+  "cameraPermissionRequired": "Camera permission required for scanning",
+  "noClothingDetected": "No clothing detected",
+  "scanningComplete": "Scanning complete",
   
   "@looseTshirt": {
     "description": "Loose t-shirt item name"

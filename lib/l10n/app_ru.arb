@@ -99,6 +99,19 @@
     "description": "Correction level label"
   },
   "correctionLevel": "Уровень коррекции",
+  "scanClothing": "Сканировать одежду",
+  "startScanning": "Начать сканирование",
+  "stopScanning": "Остановить сканирование",
+  "addToWardrobe": "Добавить в гардероб",
+  "scanningClothing": "Сканирование одежды...",
+  "clothingDetected": "Обнаружена одежда",
+  "scanInstructions": "Наведите камеру на одежду для сканирования",
+  "processingItems": "Обработка предметов...",
+  "itemsAddedToWardrobe": "Предметы добавлены в гардероб",
+  "scanningError": "Ошибка сканирования",
+  "cameraPermissionRequired": "Необходим доступ к камере для сканирования",
+  "noClothingDetected": "Одежда не обнаружена",
+  "scanningComplete": "Сканирование завершено",
   
   "@looseTshirt": {
     "description": "Loose t-shirt item name"

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'clothing_scanner_screen.dart';
 
 class WardrobeScreen extends StatefulWidget {
   const WardrobeScreen({super.key});
@@ -101,6 +102,13 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.camera_alt),
+            onPressed: () => _openScanner(context),
+            tooltip: 'Сканировать одежду',
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -430,6 +438,110 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
     setState(() {
       _selectedItems.remove(item);
     });
+  }
+
+  Future<void> _openScanner(BuildContext context) async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const ClothingScannerScreen(),
+      ),
+    );
+
+    if (result != null && result is List<DetectedClothingItem>) {
+      // Обрабатываем результаты сканирования
+      _processScannedItems(result);
+    }
+  }
+
+  void _processScannedItems(List<DetectedClothingItem> scannedItems) {
+    // Здесь можно добавить логику для обработки отсканированных предметов
+    // Например, добавить их в гардероб или показать диалог подтверждения
+    
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Отсканировано ${scannedItems.length} предметов одежды'),
+          backgroundColor: Colors.green,
+          action: SnackBarAction(
+            label: 'Просмотреть',
+            onPressed: () {
+              // Показать диалог с отсканированными предметами
+              _showScannedItemsDialog(scannedItems);
+            },
+          ),
+        ),
+      );
+    }
+  }
+
+  void _showScannedItemsDialog(List<DetectedClothingItem> scannedItems) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Отсканированные предметы'),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: scannedItems.length,
+              itemBuilder: (context, index) {
+                final item = scannedItems[index];
+                return ListTile(
+                  leading: Text(
+                    item.icon,
+                    style: const TextStyle(fontSize: 24),
+                  ),
+                  title: Text(item.name),
+                  subtitle: Text('Уверенность: ${(item.confidence * 100).toInt()}%'),
+                  trailing: IconButton(
+                    icon: const Icon(Icons.add),
+                    onPressed: () {
+                      // Добавить предмет в гардероб
+                      _addScannedItemToWardrobe(item);
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Закрыть'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _addScannedItemToWardrobe(DetectedClothingItem scannedItem) {
+    // Конвертируем отсканированный предмет в ClothingItem
+    final clothingItem = ClothingItem(
+      name: scannedItem.name,
+      category: scannedItem.category,
+      comfortLevel: 7, // Значение по умолчанию
+      correctionLevel: 5, // Значение по умолчанию
+      description: 'Отсканированный предмет одежды',
+      icon: scannedItem.icon,
+    );
+
+    // Добавляем в выбранные предметы
+    setState(() {
+      if (!_selectedItems.contains(clothingItem)) {
+        _selectedItems.add(clothingItem);
+      }
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('${scannedItem.name} добавлен в гардероб'),
+        backgroundColor: Colors.green,
+      ),
+    );
   }
 }
 
