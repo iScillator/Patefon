@@ -36,6 +36,7 @@ class LocalizationService extends ChangeNotifier {
       );
     } catch (e) {
       // Fallback в случае ошибки
+      print('Error getting system locale: $e');
       return const Locale('en', 'US');
     }
   }
