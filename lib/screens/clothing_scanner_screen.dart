@@ -241,6 +241,7 @@ class _ClothingScannerScreenState extends State<ClothingScannerScreen>
   }
 
   Widget _buildCameraView() {
+    final l10n = AppLocalizations.of(context)!;
     if (!_isInitialized || _cameraController == null) {
       return Container(
         color: Colors.black,
