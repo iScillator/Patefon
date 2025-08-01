@@ -2,7 +2,7 @@ name: LiveSkin
 description: "ИИ-система, превращающая одежду в инструмент работы с телом и психикой"
 publish_to: 'none'
 
-version: 1.0.1+2
+version: 1.0.3+4
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

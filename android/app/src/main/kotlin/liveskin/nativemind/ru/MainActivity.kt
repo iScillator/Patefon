@@ -1,4 +1,4 @@
-package freedomemanager.nativemind.ru.freedome_manager
+package liveskin.nativemind.ru
 
 import io.flutter.embedding.android.FlutterActivity
 
