@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -19,32 +20,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
   int _experimentDaysCompleted = 0;
   double _muscleProgress = 0.0;
 
-  final List<ProgressMetric> _progressMetrics = [
-    ProgressMetric(
-      name: 'Мышечная масса',
-      currentValue: 65.0,
-      targetValue: 70.0,
-      unit: 'кг',
-      icon: Icons.fitness_center,
-      color: Colors.green,
-    ),
-    ProgressMetric(
-      name: 'Жировая масса',
-      currentValue: 15.0,
-      targetValue: 12.0,
-      unit: '%',
-      icon: Icons.pie_chart,
-      color: Colors.orange,
-    ),
-    ProgressMetric(
-      name: 'Сила хвата',
-      currentValue: 45.0,
-      targetValue: 55.0,
-      unit: 'кг',
-      icon: Icons.handshake,
-      color: Colors.blue,
-    ),
-  ];
+    List<ProgressMetric> _getProgressMetrics(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return [
+      ProgressMetric(
+        name: l10n.muscleMass,
+        currentValue: 65.0,
+        targetValue: 70.0,
+        unit: l10n.kg,
+        icon: Icons.fitness_center,
+        color: Colors.green,
+      ),
+      ProgressMetric(
+        name: l10n.fatMass,
+        currentValue: 15.0,
+        targetValue: 12.0,
+        unit: l10n.percent,
+        icon: Icons.pie_chart,
+        color: Colors.orange,
+      ),
+      ProgressMetric(
+        name: l10n.gripStrength,
+        currentValue: 45.0,
+        targetValue: 55.0,
+        unit: l10n.kg,
+        icon: Icons.handshake,
+        color: Colors.blue,
+      ),
+    ];
+  }
 
   @override
   void dispose() {
@@ -59,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Профиль'),
+        title: Text(AppLocalizations.of(context)!.profile),
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
@@ -127,7 +131,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            _nameController.text.isNotEmpty ? _nameController.text : 'Пользователь',
+            _nameController.text.isNotEmpty ? _nameController.text : AppLocalizations.of(context)!.user,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -135,7 +139,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(height: 8),
           Text(
-            'Участник эксперимента "Живая Кожа"',
+            AppLocalizations.of(context)!.experimentParticipant,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: Colors.white70,
             ),
@@ -156,7 +160,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Личная информация',
+            AppLocalizations.of(context)!.personalInformation,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -164,28 +168,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(height: 16),
           
-          _buildInfoField('Имя', _nameController, Icons.person),
+          _buildInfoField(AppLocalizations.of(context)!.name, _nameController, Icons.person),
           const SizedBox(height: 12),
           
           Row(
             children: [
-              Expanded(child: _buildInfoField('Возраст', _ageController, Icons.cake)),
+              Expanded(child: _buildInfoField(AppLocalizations.of(context)!.age, _ageController, Icons.cake)),
               const SizedBox(width: 12),
-              Expanded(child: _buildInfoField('Пол', null, Icons.people, isDropdown: true)),
+              Expanded(child: _buildInfoField(AppLocalizations.of(context)!.gender, null, Icons.people, isDropdown: true)),
             ],
           ),
           const SizedBox(height: 12),
           
           Row(
             children: [
-              Expanded(child: _buildInfoField('Рост (см)', _heightController, Icons.height)),
+              Expanded(child: _buildInfoField(AppLocalizations.of(context)!.height, _heightController, Icons.height)),
               const SizedBox(width: 12),
-              Expanded(child: _buildInfoField('Вес (кг)', _weightController, Icons.monitor_weight)),
+              Expanded(child: _buildInfoField(AppLocalizations.of(context)!.weight, _weightController, Icons.monitor_weight)),
             ],
           ),
           const SizedBox(height: 12),
           
-          _buildInfoField('Уровень активности', null, Icons.directions_run, isDropdown: true),
+          _buildInfoField(AppLocalizations.of(context)!.activityLevel, null, Icons.directions_run, isDropdown: true),
         ],
       ),
     );
@@ -217,15 +221,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: const TextStyle(color: Colors.white),
               underline: const SizedBox(),
               isExpanded: true,
-              items: label == 'Пол' 
+              items: label == AppLocalizations.of(context)!.gender 
                 ? [
-                    DropdownMenuItem(value: 'male', child: Text('Мужской')),
-                    DropdownMenuItem(value: 'female', child: Text('Женский')),
+                    DropdownMenuItem(value: 'male', child: Text(AppLocalizations.of(context)!.male)),
+                    DropdownMenuItem(value: 'female', child: Text(AppLocalizations.of(context)!.female)),
                   ]
                 : [
-                    DropdownMenuItem(value: 'low', child: Text('Низкий')),
-                    DropdownMenuItem(value: 'moderate', child: Text('Умеренный')),
-                    DropdownMenuItem(value: 'high', child: Text('Высокий')),
+                    DropdownMenuItem(value: 'low', child: Text(AppLocalizations.of(context)!.low)),
+                    DropdownMenuItem(value: 'moderate', child: Text(AppLocalizations.of(context)!.moderate)),
+                    DropdownMenuItem(value: 'high', child: Text(AppLocalizations.of(context)!.high)),
                   ],
               onChanged: (value) {
                 setState(() {
@@ -276,7 +280,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Прогресс',
+            AppLocalizations.of(context)!.progress,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -284,7 +288,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(height: 16),
           
-          ..._progressMetrics.map((metric) => _buildProgressMetric(metric)),
+          ..._getProgressMetrics(context).map((metric) => _buildProgressMetric(metric)),
         ],
       ),
     );
@@ -292,7 +296,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildProgressMetric(ProgressMetric metric) {
     final progress = metric.currentValue / metric.targetValue;
-    final isImproving = metric.name == 'Жировая масса' 
+    final isImproving = metric.name == AppLocalizations.of(context)!.fatMass 
         ? metric.currentValue > metric.targetValue 
         : metric.currentValue < metric.targetValue;
     
@@ -337,7 +341,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           const SizedBox(height: 4),
           Text(
-            isImproving ? 'Прогресс: ${(progress * 100).toInt()}%' : 'Цель: ${metric.targetValue} ${metric.unit}',
+            isImproving ? 'Progress: ${(progress * 100).toInt()}%' : 'Target: ${metric.targetValue} ${metric.unit}',
             style: const TextStyle(
               color: Colors.white70,
               fontSize: 12,
@@ -359,7 +363,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Статус эксперимента',
+            AppLocalizations.of(context)!.experimentStatus,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -380,14 +384,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      _isExperimentActive ? 'Эксперимент активен' : 'Эксперимент не начат',
+                      _isExperimentActive ? AppLocalizations.of(context)!.experimentActive : AppLocalizations.of(context)!.experimentNotStarted,
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
-                      'Дней завершено: $_experimentDaysCompleted',
+                      'Days Completed: $_experimentDaysCompleted',
                       style: const TextStyle(color: Colors.white70),
                     ),
                   ],
@@ -405,7 +409,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 8),
             Text(
-              'Прогресс: ${(_muscleProgress * 100).toInt()}%',
+              'Progress: ${(_muscleProgress * 100).toInt()}%',
               style: const TextStyle(color: Colors.white70),
             ),
           ],
@@ -425,7 +429,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Настройки',
+            AppLocalizations.of(context)!.settings,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -434,26 +438,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
           const SizedBox(height: 16),
           
           _buildSettingItem(
-            'Уведомления',
-            'Получать напоминания о эксперименте',
+            AppLocalizations.of(context)!.notifications,
+            AppLocalizations.of(context)!.notificationsDescription,
             Icons.notifications,
             true,
           ),
           _buildSettingItem(
-            'Автосохранение',
-            'Автоматически сохранять прогресс',
+            AppLocalizations.of(context)!.autoSave,
+            AppLocalizations.of(context)!.autoSaveDescription,
             Icons.save,
             true,
           ),
           _buildSettingItem(
-            'Темная тема',
-            'Использовать темную тему',
+            AppLocalizations.of(context)!.darkTheme,
+            AppLocalizations.of(context)!.darkThemeDescription,
             Icons.dark_mode,
             true,
           ),
           _buildSettingItem(
-            'Экспорт данных',
-            'Экспортировать данные эксперимента',
+            AppLocalizations.of(context)!.exportData,
+            AppLocalizations.of(context)!.exportDataDescription,
             Icons.download,
             false,
           ),

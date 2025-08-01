@@ -189,10 +189,10 @@
     "description": "Day label"
   },
   "day": "Dzień",
-  "@of": {
-    "description": "Of label"
+  "@ofText": {
+    "description": "Of label for day counter"
   },
-  "of": "z",
+  "ofText": "z",
   "@muscleProgress": {
     "description": "Muscle progress label"
   },

@@ -189,10 +189,10 @@
     "description": "Day label"
   },
   "day": "天",
-  "@of": {
-    "description": "Of label"
+  "@ofText": {
+    "description": "Of label for day counter"
   },
-  "of": "共",
+  "ofText": "共",
   "@muscleProgress": {
     "description": "Muscle progress label"
   },

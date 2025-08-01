@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AnatomyScreen extends StatefulWidget {
   const AnatomyScreen({super.key});
@@ -13,38 +14,41 @@ class _AnatomyScreenState extends State<AnatomyScreen>
   late Animation<double> _fadeAnimation;
   int _currentStep = 0;
 
-  final List<AnatomyStep> _steps = [
-    AnatomyStep(
-      title: 'Волоски на теле',
-      description: 'На теле человека находится миллионы волосков. Каждый волосок имеет луковицу и корни.',
-      icon: Icons.face,
-      color: Colors.orange,
-    ),
-    AnatomyStep(
-      title: 'Нервные окончания',
-      description: 'По телу проходят миллионы нервных окончаний, которые соединены с корнями РАЗНЫХ луковиц.',
-      icon: Icons.psychology,
-      color: Colors.red,
-    ),
-    AnatomyStep(
-      title: 'Голограмма',
-      description: 'От волоска мозг получает голограмму с 3D моделью того, во что помещено тело.',
-      icon: Icons.view_in_ar,
-      color: Colors.blue,
-    ),
-    AnatomyStep(
-      title: 'Адаптация тела',
-      description: 'Мозг подстраивает анатомию тела (физической оболочки) под одежду.',
-      icon: Icons.accessibility_new,
-      color: Colors.green,
-    ),
-    AnatomyStep(
-      title: 'Примеры',
-      description: 'Арбуз в кубе → кубический арбуз\nНога в узкой обуви → деформированная стопа',
-      icon: Icons.lightbulb,
-      color: Colors.purple,
-    ),
-  ];
+  List<AnatomyStep> _getSteps(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return [
+      AnatomyStep(
+        title: l10n.anatomyStep1Title,
+        description: l10n.anatomyStep1Description,
+        icon: Icons.face,
+        color: Colors.orange,
+      ),
+      AnatomyStep(
+        title: l10n.anatomyStep2Title,
+        description: l10n.anatomyStep2Description,
+        icon: Icons.psychology,
+        color: Colors.red,
+      ),
+      AnatomyStep(
+        title: l10n.anatomyStep3Title,
+        description: l10n.anatomyStep3Description,
+        icon: Icons.view_in_ar,
+        color: Colors.blue,
+      ),
+      AnatomyStep(
+        title: l10n.anatomyStep4Title,
+        description: l10n.anatomyStep4Description,
+        icon: Icons.accessibility_new,
+        color: Colors.green,
+      ),
+      AnatomyStep(
+        title: l10n.anatomyStep5Title,
+        description: l10n.anatomyStep5Description,
+        icon: Icons.lightbulb,
+        color: Colors.purple,
+      ),
+    ];
+  }
 
   @override
   void initState() {
@@ -70,7 +74,8 @@ class _AnatomyScreenState extends State<AnatomyScreen>
   }
 
   void _nextStep() {
-    if (_currentStep < _steps.length - 1) {
+    final steps = _getSteps(context);
+    if (_currentStep < steps.length - 1) {
       setState(() {
         _currentStep++;
       });
@@ -91,9 +96,10 @@ class _AnatomyScreenState extends State<AnatomyScreen>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Анатомия'),
+        title: Text(AppLocalizations.of(context)!.anatomy),
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
@@ -118,17 +124,17 @@ class _AnatomyScreenState extends State<AnatomyScreen>
                   children: [
                     // Progress indicator
                     LinearProgressIndicator(
-                      value: (_currentStep + 1) / _steps.length,
+                      value: (_currentStep + 1) / _getSteps(context).length,
                       backgroundColor: Colors.white24,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        _steps[_currentStep].color,
+                        _getSteps(context)[_currentStep].color,
                       ),
                     ),
                     const SizedBox(height: 20),
                     
                     // Step indicator
                     Text(
-                      'Шаг ${_currentStep + 1} из ${_steps.length}',
+                      '${l10n.step} ${_currentStep + 1} ${l10n.ofLabel} ${_getSteps(context).length}',
                       style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 16,
@@ -140,7 +146,7 @@ class _AnatomyScreenState extends State<AnatomyScreen>
                     Expanded(
                       child: FadeTransition(
                         opacity: _fadeAnimation,
-                        child: _buildStepContent(_steps[_currentStep]),
+                        child: _buildStepContent(_getSteps(context)[_currentStep]),
                       ),
                     ),
                   ],
@@ -157,18 +163,18 @@ class _AnatomyScreenState extends State<AnatomyScreen>
                   ElevatedButton.icon(
                     onPressed: _currentStep > 0 ? _previousStep : null,
                     icon: const Icon(Icons.arrow_back),
-                    label: const Text('Назад'),
+                    label: Text(l10n.back),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white24,
                       foregroundColor: Colors.white,
                     ),
                   ),
                   ElevatedButton.icon(
-                    onPressed: _currentStep < _steps.length - 1 ? _nextStep : null,
+                    onPressed: _currentStep < _getSteps(context).length - 1 ? _nextStep : null,
                     icon: const Icon(Icons.arrow_forward),
-                    label: const Text('Далее'),
+                    label: Text(l10n.next),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _steps[_currentStep].color,
+                      backgroundColor: _getSteps(context)[_currentStep].color,
                       foregroundColor: Colors.white,
                     ),
                   ),
@@ -242,6 +248,7 @@ class _AnatomyScreenState extends State<AnatomyScreen>
   }
 
   Widget _buildHairFollicleDemo() {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -250,9 +257,9 @@ class _AnatomyScreenState extends State<AnatomyScreen>
       ),
       child: Column(
         children: [
-          const Text(
-            'Интерактивная модель волоска',
-            style: TextStyle(
+          Text(
+            l10n.interactiveHairModel,
+            style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
@@ -261,9 +268,9 @@ class _AnatomyScreenState extends State<AnatomyScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _buildFolliclePart('Луковица', Colors.orange),
-              _buildFolliclePart('Корни', Colors.brown),
-              _buildFolliclePart('Волосок', Colors.black),
+              _buildFolliclePart(l10n.bulb, Colors.orange),
+              _buildFolliclePart(l10n.roots, Colors.brown),
+              _buildFolliclePart(l10n.hair, Colors.black),
             ],
           ),
         ],
@@ -295,6 +302,7 @@ class _AnatomyScreenState extends State<AnatomyScreen>
   }
 
   Widget _buildNerveEndingsDemo() {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -303,9 +311,9 @@ class _AnatomyScreenState extends State<AnatomyScreen>
       ),
       child: Column(
         children: [
-          const Text(
-            'Связь нервов с волосками',
-            style: TextStyle(
+          Text(
+            l10n.nerveHairConnection,
+            style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
@@ -314,9 +322,9 @@ class _AnatomyScreenState extends State<AnatomyScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _buildNerveConnection('Нерв', Colors.red),
+              _buildNerveConnection(l10n.nerve, Colors.red),
               const Icon(Icons.arrow_forward, color: Colors.white70),
-              _buildNerveConnection('Волосок', Colors.orange),
+              _buildNerveConnection(l10n.hair, Colors.orange),
             ],
           ),
         ],
@@ -348,6 +356,7 @@ class _AnatomyScreenState extends State<AnatomyScreen>
   }
 
   Widget _buildExamplesDemo() {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -356,9 +365,9 @@ class _AnatomyScreenState extends State<AnatomyScreen>
       ),
       child: Column(
         children: [
-          const Text(
-            'Примеры адаптации',
-            style: TextStyle(
+          Text(
+            l10n.adaptationExamples,
+            style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
@@ -367,8 +376,8 @@ class _AnatomyScreenState extends State<AnatomyScreen>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _buildExample('Арбуз', '🍉', 'Куб', '⬜'),
-              _buildExample('Нога', '🦶', 'Узкая обувь', '👟'),
+              _buildExample(l10n.watermelon, '🍉', l10n.cube, '⬜'),
+              _buildExample(l10n.foot, '🦶', l10n.tightShoes, '👟'),
             ],
           ),
         ],

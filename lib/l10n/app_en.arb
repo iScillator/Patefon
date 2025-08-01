@@ -189,10 +189,10 @@
     "description": "Day label"
   },
   "day": "Day",
-  "@of": {
-    "description": "Of label"
+  "@ofText": {
+    "description": "Of label for day counter"
   },
-  "of": "of",
+  "ofText": "of",
   "@muscleProgress": {
     "description": "Muscle progress label"
   },
@@ -426,5 +426,317 @@
   "@polish": {
     "description": "Polish language"
   },
-  "polish": "Polski"
+  "polish": "Polski",
+  
+  "@step": {
+    "description": "Step label"
+  },
+  "step": "Step",
+  "@ofLabel": {
+    "description": "Of label for step counter"
+  },
+  "ofLabel": "of",
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "Back",
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "Next",
+  "@interactiveHairModel": {
+    "description": "Interactive hair model title"
+  },
+  "interactiveHairModel": "Interactive Hair Model",
+  "@bulb": {
+    "description": "Hair bulb label"
+  },
+  "bulb": "Bulb",
+  "@roots": {
+    "description": "Hair roots label"
+  },
+  "roots": "Roots",
+  "@hair": {
+    "description": "Hair label"
+  },
+  "hair": "Hair",
+  "@nerveHairConnection": {
+    "description": "Nerve-hair connection title"
+  },
+  "nerveHairConnection": "Nerve-Hair Connection",
+  "@nerve": {
+    "description": "Nerve label"
+  },
+  "nerve": "Nerve",
+  "@adaptationExamples": {
+    "description": "Adaptation examples title"
+  },
+  "adaptationExamples": "Adaptation Examples",
+  "@watermelon": {
+    "description": "Watermelon label"
+  },
+  "watermelon": "Watermelon",
+  "@cube": {
+    "description": "Cube label"
+  },
+  "cube": "Cube",
+  "@foot": {
+    "description": "Foot label"
+  },
+  "foot": "Foot",
+  "@tightShoes": {
+    "description": "Tight shoes label"
+  },
+  "tightShoes": "Tight Shoes",
+  
+  "@selectFittingMode": {
+    "description": "Select fitting mode title"
+  },
+  "selectFittingMode": "Select fitting mode",
+  "@maximumRelaxation": {
+    "description": "Maximum relaxation subtitle"
+  },
+  "maximumRelaxation": "Maximum relaxation",
+  "@activeBodyWork": {
+    "description": "Active body work subtitle"
+  },
+  "activeBodyWork": "Active body work",
+  "@bodyPart": {
+    "description": "Body part label"
+  },
+  "bodyPart": "Body part",
+  "@shoes": {
+    "description": "Shoes label"
+  },
+  "shoes": "Shoes",
+  "@comfortableClothing": {
+    "description": "Comfortable clothing label"
+  },
+  "comfortableClothing": "Comfortable Clothing",
+  "@correctiveClothing": {
+    "description": "Corrective clothing label"
+  },
+  "correctiveClothing": "Corrective Clothing",
+  "@selectedItems": {
+    "description": "Selected items label"
+  },
+  "selectedItems": "Selected Items",
+  "@comfort": {
+    "description": "Comfort label"
+  },
+  "comfort": "Comfort",
+  "@correction": {
+    "description": "Correction label"
+  },
+  "correction": "Correction",
+  
+  "@experimentTitle": {
+    "description": "Experiment title"
+  },
+  "experimentTitle": "Muscle Pumping Experiment",
+  "@experimentGoal": {
+    "description": "Experiment goal description"
+  },
+  "experimentGoal": "Goal: Prove that properly selected clothing can stimulate muscle growth through nerve endings and body hair.",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "Start Experiment",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "Day",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "Complete Day",
+  "@recommendedClothing": {
+    "description": "Recommended clothing label"
+  },
+  "recommendedClothing": "Recommended Clothing:",
+  "@expectedEffect": {
+    "description": "Expected effect label"
+  },
+  "expectedEffect": "Expected Effect:",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "Notes:",
+  "@writeObservations": {
+    "description": "Write observations hint"
+  },
+  "writeObservations": "Write your observations...",
+  "@howItWorks": {
+    "description": "How it works title"
+  },
+  "howItWorks": "How it works:",
+  "@step1Description": {
+    "description": "Step 1 description"
+  },
+  "step1Description": "Compression clothing creates pressure on hair follicles",
+  "@step2Description": {
+    "description": "Step 2 description"
+  },
+  "step2Description": "Nerve endings transmit signals to the brain",
+  "@step3Description": {
+    "description": "Step 3 description"
+  },
+  "step3Description": "Brain adapts anatomy to new \"shell\"",
+  "@step4Description": {
+    "description": "Step 4 description"
+  },
+  "step4Description": "Result: muscle strengthening and growth",
+  "@important": {
+    "description": "Important warning label"
+  },
+  "important": "⚠️ Important:",
+  "@experimentWarning": {
+    "description": "Experiment warning text"
+  },
+  "experimentWarning": "The experiment is based on the theory of clothing's influence on anatomy through nerve endings. Results may vary.",
+  "@initialAdaptation": {
+    "description": "Initial adaptation effect"
+  },
+  "initialAdaptation": "Initial body adaptation to compression clothing",
+  "@improvedCirculation": {
+    "description": "Improved circulation effect"
+  },
+  "improvedCirculation": "Improved blood circulation and muscle tone",
+  "@nerveActivation": {
+    "description": "Nerve activation effect"
+  },
+  "nerveActivation": "Nerve ending activation and muscle growth stimulation",
+  "@maximumStimulation": {
+    "description": "Maximum stimulation effect"
+  },
+  "maximumStimulation": "Maximum stimulation and visible results",
+  
+  "@user": {
+    "description": "User label"
+  },
+  "user": "User",
+  "@experimentParticipant": {
+    "description": "Experiment participant label"
+  },
+  "experimentParticipant": "Live Skin Experiment Participant",
+  "@personalInformation": {
+    "description": "Personal information title"
+  },
+  "personalInformation": "Personal Information",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "Age",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "Gender",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "Male",
+  "@female": {
+    "description": "Female gender"
+  },
+  "female": "Female",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "Height (cm)",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "Weight (kg)",
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "Activity Level",
+  "@low": {
+    "description": "Low activity level"
+  },
+  "low": "Low",
+  "@moderate": {
+    "description": "Moderate activity level"
+  },
+  "moderate": "Moderate",
+  "@high": {
+    "description": "High activity level"
+  },
+  "high": "High",
+  "@progress": {
+    "description": "Progress title"
+  },
+  "progress": "Progress",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "Muscle Mass",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "Fat Mass",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "Grip Strength",
+  "@progressPercent": {
+    "description": "Progress percentage"
+  },
+  "progressPercent": "Progress: {percent}%",
+  "@targetGoal": {
+    "description": "Target goal"
+  },
+  "targetGoal": "Target: {value} {unit}",
+  "@experimentStatus": {
+    "description": "Experiment status title"
+  },
+  "experimentStatus": "Experiment Status",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "Experiment Active",
+  "@experimentNotStarted": {
+    "description": "Experiment not started status"
+  },
+  "experimentNotStarted": "Experiment Not Started",
+  "@daysCompleted": {
+    "description": "Days completed"
+  },
+  "daysCompleted": "Days Completed: {count}",
+  "@settings": {
+    "description": "Settings title"
+  },
+  "settings": "Settings",
+  "@notifications": {
+    "description": "Notifications setting"
+  },
+  "notifications": "Notifications",
+  "@notificationsDescription": {
+    "description": "Notifications description"
+  },
+  "notificationsDescription": "Receive experiment reminders",
+  "@autoSave": {
+    "description": "Auto save setting"
+  },
+  "autoSave": "Auto Save",
+  "@autoSaveDescription": {
+    "description": "Auto save description"
+  },
+  "autoSaveDescription": "Automatically save progress",
+  "@darkTheme": {
+    "description": "Dark theme setting"
+  },
+  "darkTheme": "Dark Theme",
+  "@darkThemeDescription": {
+    "description": "Dark theme description"
+  },
+  "darkThemeDescription": "Use dark theme",
+  "@exportData": {
+    "description": "Export data setting"
+  },
+  "exportData": "Export Data",
+  "@exportDataDescription": {
+    "description": "Export data description"
+  },
+  "exportDataDescription": "Export experiment data"
 } 

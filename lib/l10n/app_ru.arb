@@ -189,10 +189,10 @@
     "description": "Day label"
   },
   "day": "День",
-  "@of": {
-    "description": "Of label"
+  "@ofText": {
+    "description": "Of label for day counter"
   },
-  "of": "из",
+  "ofText": "из",
   "@muscleProgress": {
     "description": "Muscle progress label"
   },
@@ -428,5 +428,317 @@
   "@polish": {
     "description": "Polish language"
   },
-  "polish": "Polski"
+  "polish": "Polski",
+  
+  "@step": {
+    "description": "Step label"
+  },
+  "step": "Шаг",
+  "@ofLabel": {
+    "description": "Of label for step counter"
+  },
+  "ofLabel": "из",
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "Назад",
+  "@next": {
+    "description": "Next button"
+  },
+  "next": "Далее",
+  "@interactiveHairModel": {
+    "description": "Interactive hair model title"
+  },
+  "interactiveHairModel": "Интерактивная модель волоска",
+  "@bulb": {
+    "description": "Hair bulb label"
+  },
+  "bulb": "Луковица",
+  "@roots": {
+    "description": "Hair roots label"
+  },
+  "roots": "Корни",
+  "@hair": {
+    "description": "Hair label"
+  },
+  "hair": "Волосок",
+  "@nerveHairConnection": {
+    "description": "Nerve-hair connection title"
+  },
+  "nerveHairConnection": "Связь нервов с волосками",
+  "@nerve": {
+    "description": "Nerve label"
+  },
+  "nerve": "Нерв",
+  "@adaptationExamples": {
+    "description": "Adaptation examples title"
+  },
+  "adaptationExamples": "Примеры адаптации",
+  "@watermelon": {
+    "description": "Watermelon label"
+  },
+  "watermelon": "Арбуз",
+  "@cube": {
+    "description": "Cube label"
+  },
+  "cube": "Куб",
+  "@foot": {
+    "description": "Foot label"
+  },
+  "foot": "Нога",
+  "@tightShoes": {
+    "description": "Tight shoes label"
+  },
+  "tightShoes": "Узкая обувь",
+  
+  "@selectFittingMode": {
+    "description": "Select fitting mode title"
+  },
+  "selectFittingMode": "Выберите режим подгонки",
+  "@maximumRelaxation": {
+    "description": "Maximum relaxation subtitle"
+  },
+  "maximumRelaxation": "Максимальное расслабление",
+  "@activeBodyWork": {
+    "description": "Active body work subtitle"
+  },
+  "activeBodyWork": "Активная работа тела",
+  "@bodyPart": {
+    "description": "Body part label"
+  },
+  "bodyPart": "Часть тела",
+  "@shoes": {
+    "description": "Shoes label"
+  },
+  "shoes": "Обувь",
+  "@comfortableClothing": {
+    "description": "Comfortable clothing label"
+  },
+  "comfortableClothing": "Комфортная одежда",
+  "@correctiveClothing": {
+    "description": "Corrective clothing label"
+  },
+  "correctiveClothing": "Корректирующая одежда",
+  "@selectedItems": {
+    "description": "Selected items label"
+  },
+  "selectedItems": "Выбранные предметы",
+  "@comfort": {
+    "description": "Comfort label"
+  },
+  "comfort": "Комфорт",
+  "@correction": {
+    "description": "Correction label"
+  },
+  "correction": "Коррекция",
+  
+  "@experimentTitle": {
+    "description": "Experiment title"
+  },
+  "experimentTitle": "Эксперимент: Накачка мышц через одежду",
+  "@experimentGoal": {
+    "description": "Experiment goal description"
+  },
+  "experimentGoal": "Цель: Доказать, что правильно подобранная одежда может стимулировать рост мышц через нервные окончания и волоски на теле.",
+  "@startExperiment": {
+    "description": "Start experiment button"
+  },
+  "startExperiment": "Начать эксперимент",
+  "@day": {
+    "description": "Day label"
+  },
+  "day": "День",
+  "@completeDay": {
+    "description": "Complete day button"
+  },
+  "completeDay": "Завершить день",
+  "@recommendedClothing": {
+    "description": "Recommended clothing label"
+  },
+  "recommendedClothing": "Рекомендуемая одежда:",
+  "@expectedEffect": {
+    "description": "Expected effect label"
+  },
+  "expectedEffect": "Ожидаемый эффект:",
+  "@notes": {
+    "description": "Notes label"
+  },
+  "notes": "Заметки:",
+  "@writeObservations": {
+    "description": "Write observations hint"
+  },
+  "writeObservations": "Запишите свои наблюдения...",
+  "@howItWorks": {
+    "description": "How it works title"
+  },
+  "howItWorks": "Как это работает:",
+  "@step1Description": {
+    "description": "Step 1 description"
+  },
+  "step1Description": "Компрессионная одежда создает давление на волоски",
+  "@step2Description": {
+    "description": "Step 2 description"
+  },
+  "step2Description": "Нервные окончания передают сигналы в мозг",
+  "@step3Description": {
+    "description": "Step 3 description"
+  },
+  "step3Description": "Мозг адаптирует анатомию под новую \"оболочку\"",
+  "@step4Description": {
+    "description": "Step 4 description"
+  },
+  "step4Description": "Результат: укрепление и рост мышц",
+  "@important": {
+    "description": "Important warning label"
+  },
+  "important": "⚠️ Важно:",
+  "@experimentWarning": {
+    "description": "Experiment warning text"
+  },
+  "experimentWarning": "Эксперимент основан на теории влияния одежды на анатомию через нервные окончания. Результаты могут варьироваться.",
+  "@initialAdaptation": {
+    "description": "Initial adaptation effect"
+  },
+  "initialAdaptation": "Начальная адаптация тела к компрессионной одежде",
+  "@improvedCirculation": {
+    "description": "Improved circulation effect"
+  },
+  "improvedCirculation": "Улучшение кровообращения и тонуса мышц",
+  "@nerveActivation": {
+    "description": "Nerve activation effect"
+  },
+  "nerveActivation": "Активация нервных окончаний и стимуляция роста мышц",
+  "@maximumStimulation": {
+    "description": "Maximum stimulation effect"
+  },
+  "maximumStimulation": "Максимальная стимуляция и видимые результаты",
+  
+  "@user": {
+    "description": "User label"
+  },
+  "user": "Пользователь",
+  "@experimentParticipant": {
+    "description": "Experiment participant label"
+  },
+  "experimentParticipant": "Участник эксперимента \"Живая Кожа\"",
+  "@personalInformation": {
+    "description": "Personal information title"
+  },
+  "personalInformation": "Личная информация",
+  "@age": {
+    "description": "Age label"
+  },
+  "age": "Возраст",
+  "@gender": {
+    "description": "Gender label"
+  },
+  "gender": "Пол",
+  "@male": {
+    "description": "Male gender"
+  },
+  "male": "Мужской",
+  "@female": {
+    "description": "Female gender"
+  },
+  "female": "Женский",
+  "@height": {
+    "description": "Height label"
+  },
+  "height": "Рост (см)",
+  "@weight": {
+    "description": "Weight label"
+  },
+  "weight": "Вес (кг)",
+  "@activityLevel": {
+    "description": "Activity level label"
+  },
+  "activityLevel": "Уровень активности",
+  "@low": {
+    "description": "Low activity level"
+  },
+  "low": "Низкий",
+  "@moderate": {
+    "description": "Moderate activity level"
+  },
+  "moderate": "Умеренный",
+  "@high": {
+    "description": "High activity level"
+  },
+  "high": "Высокий",
+  "@progress": {
+    "description": "Progress title"
+  },
+  "progress": "Прогресс",
+  "@muscleMass": {
+    "description": "Muscle mass metric"
+  },
+  "muscleMass": "Мышечная масса",
+  "@fatMass": {
+    "description": "Fat mass metric"
+  },
+  "fatMass": "Жировая масса",
+  "@gripStrength": {
+    "description": "Grip strength metric"
+  },
+  "gripStrength": "Сила хвата",
+  "@progressPercent": {
+    "description": "Progress percentage"
+  },
+  "progressPercent": "Прогресс: {percent}%",
+  "@targetGoal": {
+    "description": "Target goal"
+  },
+  "targetGoal": "Цель: {value} {unit}",
+  "@experimentStatus": {
+    "description": "Experiment status title"
+  },
+  "experimentStatus": "Статус эксперимента",
+  "@experimentActive": {
+    "description": "Experiment active status"
+  },
+  "experimentActive": "Эксперимент активен",
+  "@experimentNotStarted": {
+    "description": "Experiment not started status"
+  },
+  "experimentNotStarted": "Эксперимент не начат",
+  "@daysCompleted": {
+    "description": "Days completed"
+  },
+  "daysCompleted": "Дней завершено: {count}",
+  "@settings": {
+    "description": "Settings title"
+  },
+  "settings": "Настройки",
+  "@notifications": {
+    "description": "Notifications setting"
+  },
+  "notifications": "Уведомления",
+  "@notificationsDescription": {
+    "description": "Notifications description"
+  },
+  "notificationsDescription": "Получать напоминания о эксперименте",
+  "@autoSave": {
+    "description": "Auto save setting"
+  },
+  "autoSave": "Автосохранение",
+  "@autoSaveDescription": {
+    "description": "Auto save description"
+  },
+  "autoSaveDescription": "Автоматически сохранять прогресс",
+  "@darkTheme": {
+    "description": "Dark theme setting"
+  },
+  "darkTheme": "Темная тема",
+  "@darkThemeDescription": {
+    "description": "Dark theme description"
+  },
+  "darkThemeDescription": "Использовать темную тему",
+  "@exportData": {
+    "description": "Export data setting"
+  },
+  "exportData": "Экспорт данных",
+  "@exportDataDescription": {
+    "description": "Export data description"
+  },
+  "exportDataDescription": "Экспортировать данные эксперимента"
 } 

@@ -179,7 +179,12 @@ class HomeScreen extends StatelessWidget {
   }
 
   void _showLanguageDialog(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
+    if (l10n == null) {
+      // Fallback если локализация недоступна
+      return;
+    }
+    
     final currentLanguage = localizationService.getCurrentLanguageCode();
     final availableLanguages = localizationService.getAvailableLanguages();
     
@@ -195,14 +200,19 @@ class HomeScreen extends StatelessWidget {
               itemCount: availableLanguages.length,
               itemBuilder: (context, index) {
                 final language = availableLanguages[index];
-                final isSelected = language['code'] == currentLanguage || 
-                                 (language['code'] == 'system' && localizationService.isSystemLanguage);
+                final languageCode = language['code'] ?? '';
+                final languageName = language['name'] ?? 'Unknown';
+                
+                final isSelected = languageCode == currentLanguage || 
+                                 (languageCode == 'system' && localizationService.isSystemLanguage);
                 
                 return ListTile(
-                  title: Text(language['name']!),
+                  title: Text(languageName),
                   trailing: isSelected ? const Icon(Icons.check, color: Colors.deepPurple) : null,
                   onTap: () {
-                    localizationService.setLanguage(language['code']!);
+                    if (languageCode.isNotEmpty) {
+                      localizationService.setLanguage(languageCode);
+                    }
                     Navigator.of(context).pop();
                   },
                 );

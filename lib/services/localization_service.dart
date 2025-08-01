@@ -76,7 +76,10 @@ class LocalizationService extends ChangeNotifier {
   
   // Получить текущий язык
   String getCurrentLanguageCode() {
-    return _currentLocale?.languageCode ?? 'en';
+    if (_currentLocale == null) {
+      return 'en'; // Fallback значение
+    }
+    return _currentLocale!.languageCode;
   }
   
   // Получить название языка

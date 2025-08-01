@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WardrobeScreen extends StatefulWidget {
   const WardrobeScreen({super.key});
@@ -12,85 +13,91 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
   String _selectedBodyPart = 'all';
   List<ClothingItem> _selectedItems = [];
 
-  final List<ClothingItem> _comfortItems = [
-    ClothingItem(
-      name: 'Свободная футболка',
-      category: 'top',
-      comfortLevel: 9,
-      correctionLevel: 2,
-      description: 'Мягкая хлопковая ткань, не сковывает движения',
-      icon: '👕',
-    ),
-    ClothingItem(
-      name: 'Джинсы свободного кроя',
-      category: 'bottom',
-      comfortLevel: 8,
-      correctionLevel: 3,
-      description: 'Комфортная посадка, не давит на живот',
-      icon: '👖',
-    ),
-    ClothingItem(
-      name: 'Спортивные шорты',
-      category: 'bottom',
-      comfortLevel: 10,
-      correctionLevel: 1,
-      description: 'Максимальная свобода движений',
-      icon: '🩳',
-    ),
-    ClothingItem(
-      name: 'Хлопковая рубашка',
-      category: 'top',
-      comfortLevel: 7,
-      correctionLevel: 4,
-      description: 'Дышащая ткань, классический крой',
-      icon: '👔',
-    ),
-  ];
+  List<ClothingItem> _getComfortItems(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return [
+      ClothingItem(
+        name: l10n.looseTshirt,
+        category: 'top',
+        comfortLevel: 9,
+        correctionLevel: 2,
+        description: l10n.looseTshirtDescription,
+        icon: '👕',
+      ),
+      ClothingItem(
+        name: l10n.looseJeans,
+        category: 'bottom',
+        comfortLevel: 8,
+        correctionLevel: 3,
+        description: l10n.looseJeansDescription,
+        icon: '👖',
+      ),
+      ClothingItem(
+        name: l10n.sportsShorts,
+        category: 'bottom',
+        comfortLevel: 10,
+        correctionLevel: 1,
+        description: l10n.sportsShortsDescription,
+        icon: '🩳',
+      ),
+      ClothingItem(
+        name: l10n.cottonShirt,
+        category: 'top',
+        comfortLevel: 7,
+        correctionLevel: 4,
+        description: l10n.cottonShirtDescription,
+        icon: '👔',
+      ),
+    ];
+  }
 
-  final List<ClothingItem> _correctionItems = [
-    ClothingItem(
-      name: 'Утягивающая майка',
-      category: 'top',
-      comfortLevel: 4,
-      correctionLevel: 9,
-      description: 'Корректирует осанку и поддерживает мышцы',
-      icon: '🎽',
-    ),
-    ClothingItem(
-      name: 'Компрессионные леггинсы',
-      category: 'bottom',
-      comfortLevel: 6,
-      correctionLevel: 8,
-      description: 'Улучшают кровообращение и тонус мышц',
-      icon: '🩱',
-    ),
-    ClothingItem(
-      name: 'Корсет для осанки',
-      category: 'top',
-      comfortLevel: 3,
-      correctionLevel: 10,
-      description: 'Исправляет осанку и укрепляет спину',
-      icon: '🦴',
-    ),
-    ClothingItem(
-      name: 'Спортивный бюстгальтер',
-      category: 'top',
-      comfortLevel: 7,
-      correctionLevel: 7,
-      description: 'Поддерживает грудь во время тренировок',
-      icon: '👙',
-    ),
-  ];
+  List<ClothingItem> _getCorrectionItems(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    return [
+      ClothingItem(
+        name: l10n.compressionTank,
+        category: 'top',
+        comfortLevel: 4,
+        correctionLevel: 9,
+        description: l10n.compressionTankDescription,
+        icon: '🎽',
+      ),
+      ClothingItem(
+        name: l10n.compressionLeggings,
+        category: 'bottom',
+        comfortLevel: 6,
+        correctionLevel: 8,
+        description: l10n.compressionLeggingsDescription,
+        icon: '🩱',
+      ),
+      ClothingItem(
+        name: l10n.postureCorset,
+        category: 'top',
+        comfortLevel: 3,
+        correctionLevel: 10,
+        description: l10n.postureCorsetDescription,
+        icon: '🦴',
+      ),
+      ClothingItem(
+        name: l10n.sportsBra,
+        category: 'top',
+        comfortLevel: 7,
+        correctionLevel: 7,
+        description: l10n.sportsBraDescription,
+        icon: '👙',
+      ),
+    ];
+  }
 
   List<ClothingItem> get _currentItems {
-    return _selectedMode == 'comfort' ? _comfortItems : _correctionItems;
+    return _selectedMode == 'comfort' ? _getComfortItems(context) : _getCorrectionItems(context);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Гардероб'),
+        title: Text(AppLocalizations.of(context)!.wardrobe),
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
@@ -114,7 +121,7 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
               child: Column(
                 children: [
                   Text(
-                    'Выберите режим подбора',
+                    AppLocalizations.of(context)!.selectFittingMode,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -125,8 +132,8 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                     children: [
                       Expanded(
                         child: _buildModeButton(
-                          'Комфорт',
-                          'Максимальное расслабление',
+                          AppLocalizations.of(context)!.comfortMode,
+                          AppLocalizations.of(context)!.maximumRelaxation,
                           Icons.sentiment_satisfied,
                           Colors.green,
                           'comfort',
@@ -135,8 +142,8 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                       const SizedBox(width: 12),
                       Expanded(
                         child: _buildModeButton(
-                          'Коррекция',
-                          'Активная работа с телом',
+                          AppLocalizations.of(context)!.correctionMode,
+                          AppLocalizations.of(context)!.activeBodyWork,
                           Icons.fitness_center,
                           Colors.orange,
                           'correction',
@@ -155,7 +162,7 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Часть тела',
+                    AppLocalizations.of(context)!.bodyPart,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -166,10 +173,10 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        _buildBodyPartButton('Все', 'all', Icons.person),
-                        _buildBodyPartButton('Верх', 'top', Icons.accessibility),
-                        _buildBodyPartButton('Низ', 'bottom', Icons.directions_walk),
-                        _buildBodyPartButton('Обувь', 'shoes', Icons.sports_soccer),
+                        _buildBodyPartButton(AppLocalizations.of(context)!.allBodyParts, 'all', Icons.person),
+                        _buildBodyPartButton(AppLocalizations.of(context)!.topClothing, 'top', Icons.accessibility),
+                        _buildBodyPartButton(AppLocalizations.of(context)!.bottomClothing, 'bottom', Icons.directions_walk),
+                        _buildBodyPartButton(AppLocalizations.of(context)!.shoes, 'shoes', Icons.sports_soccer),
                       ],
                     ),
                   ),
@@ -187,7 +194,7 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      _selectedMode == 'comfort' ? 'Комфортная одежда' : 'Корректирующая одежда',
+                      _selectedMode == 'comfort' ? AppLocalizations.of(context)!.comfortableClothing : AppLocalizations.of(context)!.correctiveClothing,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -223,7 +230,7 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Выбранные предметы (${_selectedItems.length})',
+                      '${AppLocalizations.of(context)!.selectedItems} (${_selectedItems.length})',
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -370,9 +377,9 @@ class _WardrobeScreenState extends State<WardrobeScreen> {
             const SizedBox(height: 8),
             Row(
               children: [
-                _buildLevelIndicator('Комфорт', item.comfortLevel, Colors.green),
+                _buildLevelIndicator(AppLocalizations.of(context)!.comfort, item.comfortLevel, Colors.green),
                 const SizedBox(width: 16),
-                _buildLevelIndicator('Коррекция', item.correctionLevel, Colors.orange),
+                _buildLevelIndicator(AppLocalizations.of(context)!.correction, item.correctionLevel, Colors.orange),
               ],
             ),
           ],

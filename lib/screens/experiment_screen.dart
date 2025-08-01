@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ExperimentScreen extends StatefulWidget {
   const ExperimentScreen({super.key});
@@ -45,14 +46,15 @@ class _ExperimentScreenState extends State<ExperimentScreen>
   }
 
   List<String> _getClothingForDay(int day) {
+    final l10n = AppLocalizations.of(context)!;
     if (day <= 7) {
-      return ['Утягивающая майка', 'Компрессионные леггинсы'];
+      return [l10n.compressionTank, l10n.compressionLeggings];
     } else if (day <= 14) {
-      return ['Спортивный бюстгальтер', 'Утягивающая майка', 'Компрессионные леггинсы'];
+      return [l10n.sportsBra, l10n.compressionTank, l10n.compressionLeggings];
     } else if (day <= 21) {
-      return ['Корсет для осанки', 'Утягивающая майка', 'Компрессионные леггинсы'];
+      return [l10n.postureCorset, l10n.compressionTank, l10n.compressionLeggings];
     } else {
-      return ['Корсет для осанки', 'Утягивающая майка', 'Компрессионные леггинсы', 'Спортивный бюстгальтер'];
+      return [l10n.postureCorset, l10n.compressionTank, l10n.compressionLeggings, l10n.sportsBra];
     }
   }
 
@@ -88,7 +90,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Эксперимент'),
+        title: Text(AppLocalizations.of(context)!.experiment),
         backgroundColor: Colors.deepPurple.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
@@ -118,7 +120,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
                 child: Column(
                   children: [
                     Text(
-                      'Эксперимент: Накачка мышц через одежду',
+                      AppLocalizations.of(context)!.experimentTitle,
                       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -127,7 +129,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'Цель: Доказать, что правильно подобранная одежда может стимулировать рост мышц через нервные окончания и волоски на теле.',
+                      AppLocalizations.of(context)!.experimentGoal,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: Colors.white70,
                       ),
@@ -139,7 +141,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
                       ElevatedButton.icon(
                         onPressed: _startExperiment,
                         icon: const Icon(Icons.play_arrow),
-                        label: const Text('Начать эксперимент'),
+                        label: Text(AppLocalizations.of(context)!.startExperiment),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.green,
                           foregroundColor: Colors.white,
@@ -179,7 +181,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'День $_currentDay из $_totalDays',
+              '${AppLocalizations.of(context)!.day} $_currentDay ${AppLocalizations.of(context)!.ofLabel} $_totalDays',
               style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -206,7 +208,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
         ElevatedButton.icon(
           onPressed: _currentDay <= _totalDays ? _completeDay : null,
           icon: const Icon(Icons.check),
-          label: const Text('Завершить день'),
+          label: Text(AppLocalizations.of(context)!.completeDay),
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
@@ -228,7 +230,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'День $_currentDay',
+            '${AppLocalizations.of(context)!.day} $_currentDay',
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -237,7 +239,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           const SizedBox(height: 16),
           
           Text(
-            'Рекомендуемая одежда:',
+            AppLocalizations.of(context)!.recommendedClothing,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -261,7 +263,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           const SizedBox(height: 20),
           
           Text(
-            'Ожидаемый эффект:',
+            AppLocalizations.of(context)!.expectedEffect,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -273,7 +275,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           const SizedBox(height: 20),
           
           Text(
-            'Заметки:',
+            AppLocalizations.of(context)!.notes,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -282,9 +284,9 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           const SizedBox(height: 8),
           TextField(
             style: const TextStyle(color: Colors.white),
-            decoration: const InputDecoration(
-              hintText: 'Запишите свои наблюдения...',
-              hintStyle: TextStyle(color: Colors.white54),
+            decoration: InputDecoration(
+              hintText: AppLocalizations.of(context)!.writeObservations,
+              hintStyle: const TextStyle(color: Colors.white54),
               border: OutlineInputBorder(),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.white24),
@@ -304,20 +306,21 @@ class _ExperimentScreenState extends State<ExperimentScreen>
   }
 
   Widget _buildExpectedEffect() {
+    final l10n = AppLocalizations.of(context)!;
     String effect;
     Color color;
     
     if (_currentDay <= 7) {
-      effect = 'Начальная адаптация тела к компрессионной одежде';
+      effect = l10n.initialAdaptation;
       color = Colors.blue;
     } else if (_currentDay <= 14) {
-      effect = 'Улучшение кровообращения и тонуса мышц';
+      effect = l10n.improvedCirculation;
       color = Colors.green;
     } else if (_currentDay <= 21) {
-      effect = 'Активация нервных окончаний и стимуляция роста мышц';
+      effect = l10n.nerveActivation;
       color = Colors.orange;
     } else {
-      effect = 'Максимальная стимуляция и видимые результаты';
+      effect = l10n.maximumStimulation;
       color = Colors.red;
     }
     
@@ -349,7 +352,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Как это работает:',
+            AppLocalizations.of(context)!.howItWorks,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -359,22 +362,22 @@ class _ExperimentScreenState extends State<ExperimentScreen>
           
           _buildInfoStep(
             1,
-            'Компрессионная одежда создает давление на волоски',
+            AppLocalizations.of(context)!.step1Description,
             Icons.compress,
           ),
           _buildInfoStep(
             2,
-            'Нервные окончания передают сигналы в мозг',
+            AppLocalizations.of(context)!.step2Description,
             Icons.psychology,
           ),
           _buildInfoStep(
             3,
-            'Мозг адаптирует анатомию под новую "оболочку"',
+            AppLocalizations.of(context)!.step3Description,
             Icons.accessibility_new,
           ),
           _buildInfoStep(
             4,
-            'Результат: укрепление и рост мышц',
+            AppLocalizations.of(context)!.step4Description,
             Icons.fitness_center,
           ),
           
@@ -391,7 +394,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '⚠️ Важно:',
+                  AppLocalizations.of(context)!.important,
                   style: TextStyle(
                     color: Colors.orange,
                     fontWeight: FontWeight.bold,
@@ -399,7 +402,7 @@ class _ExperimentScreenState extends State<ExperimentScreen>
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Эксперимент основан на теории влияния одежды на анатомию через нервные окончания. Результаты могут варьироваться.',
+                  AppLocalizations.of(context)!.experimentWarning,
                   style: TextStyle(color: Colors.orange.shade200),
                 ),
               ],
