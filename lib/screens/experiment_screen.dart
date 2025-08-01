@@ -32,8 +32,14 @@ class _ExperimentScreenState extends State<ExperimentScreen>
       parent: _animationController,
       curve: Curves.easeInOut,
     ));
-    
-    _initializeExperiment();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_experimentDays.isEmpty) {
+      _initializeExperiment();
+    }
   }
 
   void _initializeExperiment() {
