@@ -28,11 +28,16 @@ class LocalizationService extends ChangeNotifier {
   
   // Получить системную локаль
   static Locale getSystemLocale() {
-    final String systemLocale = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
-    return supportedLocales.firstWhere(
-      (locale) => locale.languageCode == systemLocale,
-      orElse: () => const Locale('en', 'US'),
-    );
+    try {
+      final String systemLocale = WidgetsBinding.instance.platformDispatcher.locale.languageCode;
+      return supportedLocales.firstWhere(
+        (locale) => locale.languageCode == systemLocale,
+        orElse: () => const Locale('en', 'US'),
+      );
+    } catch (e) {
+      // Fallback в случае ошибки
+      return const Locale('en', 'US');
+    }
   }
   
   // Инициализация сервиса
