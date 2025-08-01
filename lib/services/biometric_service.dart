@@ -209,11 +209,15 @@ class BiometricService {
     // Симулируем изменения для компрессионной одежды
     final changes = simulateBiometricChanges('compression', days);
     
+    // Безопасное извлечение значений с проверкой на null
+    final bodyComposition = currentData['bodyComposition'] as Map<String, dynamic>? ?? {};
+    final fitnessMetrics = currentData['fitnessMetrics'] as Map<String, dynamic>? ?? {};
+    
     forecast['projectedData'] = {
-      'muscleMass': (currentData['bodyComposition']?['muscleMass'] ?? 0.0) + (changes['muscleMass'] ?? 0),
-      'bodyFat': (currentData['bodyComposition']?['bodyFat'] ?? 0.0) + (changes['bodyFat'] ?? 0),
-      'gripStrength': (currentData['fitnessMetrics']?['gripStrength'] ?? 0.0) + (changes['gripStrength'] ?? 0),
-      'flexibility': (currentData['fitnessMetrics']?['flexibility'] ?? 0.0) + (changes['flexibility'] ?? 0),
+      'muscleMass': (bodyComposition['muscleMass'] as double? ?? 0.0) + (changes['muscleMass'] ?? 0.0),
+      'bodyFat': (bodyComposition['bodyFat'] as double? ?? 0.0) + (changes['bodyFat'] ?? 0.0),
+      'gripStrength': (fitnessMetrics['gripStrength'] as double? ?? 0.0) + (changes['gripStrength'] ?? 0.0),
+      'flexibility': (fitnessMetrics['flexibility'] as double? ?? 0.0) + (changes['flexibility'] ?? 0.0),
     };
     
     forecast['confidence'] = 0.75 + (days / 30.0) * 0.2; // Уверенность растет со временем
