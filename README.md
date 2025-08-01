@@ -1,12 +1,14 @@
-# ⚠️ ВАЖНОЕ УВЕДОМЛЕНИЕ / IMPORTANT NOTICE
+# ⚠️ ВАЖНОЕ УВЕДОМЛЕНИЕ / IMPORTANT NOTICE / ประกาศสำคัญ / 重要声明
 
 **Этот репозиторий содержит только прототип для демонстрации потенциальным инвесторам и партнерам.**  
-**This repository contains only a prototype for demonstration to potential investors and partners.**
+**This repository contains only a prototype for demonstration to potential investors and partners.**  
+**ที่เก็บข้อมูลนี้มีเพียงต้นแบบสำหรับการสาธิตให้กับนักลงทุนและพันธมิตรที่มีศักยภาพ**  
+**此存储库仅包含用于向潜在投资者和合作伙伴演示的原型**
 
-- 📁 Исходные коды и бинарные файлы / Source code and binary files
-- 🔒 Репозиторий не обновляется / Repository is not updated
-- 🚀 Активная разработка ведется в закрытом репозитории / Active development is conducted in a private repository
-- 🔗 Основной проект: https://gitlab.com/LiveSkin
+- 📁 Исходные коды и бинарные файлы / Source code and binary files / รหัสต้นฉบับและไฟล์ไบนารี / 源代码和二进制文件
+- 🔒 Репозиторий не обновляется / Repository is not updated / ที่เก็บข้อมูลไม่ได้รับการอัปเดต / 存储库未更新
+- 🚀 Активная разработка ведется в закрытом репозитории / Active development is conducted in a private repository / การพัฒนาที่ใช้งานอยู่ดำเนินการในที่เก็บข้อมูลส่วนตัว / 活跃开发在私有存储库中进行
+- 🔗 Основной проект: https://gitlab.com/LiveSkin / Main project: https://gitlab.com/LiveSkin / โครงการหลัก: https://gitlab.com/LiveSkin / 主要项目: https://gitlab.com/LiveSkin
 
 ---
 
@@ -36,7 +38,7 @@
 - 🇲🇲 Бирманский  
 - 🇱🇦 Лаосский
 - 🇰🇭 Кхмерский (Камбоджа)  
-- 🇨🇳 Китайский  
+- ��🇳 Китайский  
 - 🇯🇵 Японский  
 - 🇮🇳 Хинди  
 - 🇸🇦 Арабский  
@@ -169,3 +171,57 @@ AI系统将服装转化为与身体和心理工作的工具。
 ### 💬 如果你有共鸣 — 请联系我们。也许你将成为团队的一部分。
 
 > 基于解剖学。通过AI实现。揭示身体和意识。
+
+---
+
+# LiveSkin.ai Project
+
+## 📌 Core Concept
+
+AI system that transforms clothing into a tool for working with the body and psyche.  
+"Living Skin AI" is a simulation of nerve ending reactions, modeling 3D holograms of the body in clothing, and selecting stylish looks that **either relax the body or purposefully correct it**.
+
+---
+
+## Capabilities
+
+- AI virtual try-on (3D + AR)
+- Edge device support (mobile, ARM)
+- Own generative engine without Open Source restrictions
+- Architecture targeted at B2C and B2B
+
+---
+
+## 🌍 Supported Languages
+- 🇷🇺 Russian  
+- 🇺🇦 Ukrainian  
+- 🇺🇸 English  
+- 🇹🇭 Thai  
+- 🇲🇲 Burmese  
+- 🇱🇦 Lao
+- 🇰🇭 Khmer (Cambodia)  
+- 🇨🇳 Chinese  
+- 🇯🇵 Japanese  
+- 🇮🇳 Hindi  
+- 🇸🇦 Arabic  
+- 🇩🇪 German  
+- 🇵🇱 Polish  
+
+## 🧠 Team
+
+- **Anton Dodonov** — Tech Lead, Neural Interfaces
+- **Alexander Grigorenko** — Business Architect
+
+## 🎯 Why We Do It Ourselves?
+
+Unfortunately, some market participants try to get ideas without paying for the work.  
+This happened with one client who promised to pay for consultation but violated the agreement.  
+
+We decided to **launch the project independently** — and are **open to cooperation** with honest and visionary partners who:
+- share the idea of transforming perception through clothing;
+- understand the potential of AI in fashion/health;
+- are ready to build a new level product.
+
+### 💬 If you feel a response — write to us. Perhaps you will become part of the team.
+
+> Based on anatomy. Implemented through AI. Reveals body and consciousness.
