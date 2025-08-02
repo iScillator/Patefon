@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# HolySpots IPA Build Script
+# LiveSkin IPA Build Script
 # Скрипт для сборки IPA файла Flutter iOS приложения
 
-echo "🚀 Начинаем сборку IPA для HolySpots..."
+echo "🚀 Начинаем сборку IPA для LiveSkin..."
 
 # Проверяем, что мы в правильной директории
 if [ ! -f "pubspec.yaml" ]; then
@@ -11,11 +11,22 @@ if [ ! -f "pubspec.yaml" ]; then
     exit 1
 fi
 
+# Получаем версию из pubspec.yaml
+VERSION=$(grep 'version:' pubspec.yaml | sed 's/version: //' | sed 's/+.*//')
+PROJECT_NAME="LiveSkin"
+BUILD_NAME="${PROJECT_NAME}-${VERSION}"
+
+echo "📦 Версия: $VERSION"
+echo "🏗️  Имя сборки: $BUILD_NAME"
+
 # Проверяем, что Xcode установлен
 if ! command -v xcodebuild &> /dev/null; then
     echo "❌ Ошибка: Xcode не найден. Установите Xcode для сборки iOS приложений."
     exit 1
 fi
+
+# Создаем папку builds если её нет
+mkdir -p builds
 
 # Очищаем предыдущие сборки
 echo "🧹 Очищаем предыдущие сборки..."
@@ -48,24 +59,49 @@ if [ $? -eq 0 ]; then
     echo "✅ iOS приложение успешно собрано!"
     echo "📱 Приложение находится в: build/ios/iphoneos/Runner.app"
     
-    # Создаем IPA файл (требует подписанный код)
-    echo "📦 Создаем IPA файл..."
+    # Создаем архив
+    echo "📦 Создаем архив..."
+    cd ios
+    xcodebuild -workspace Runner.xcworkspace -scheme Runner -configuration Release -archivePath build/Runner.xcarchive archive
     
-    # Проверяем наличие подписанного приложения
-    if [ -d "build/ios/iphoneos/Runner.app" ]; then
-        echo "📏 Размер приложения: $(du -sh build/ios/iphoneos/Runner.app | cut -f1)"
-        echo "ℹ️  Для создания IPA файла требуется подписанный код."
-        echo "💡 Используйте Xcode для подписи и создания IPA:"
-        echo "   1. Откройте ios/Runner.xcworkspace в Xcode"
-        echo "   2. Выберите Product -> Archive"
-        echo "   3. В Organizer выберите Distribute App"
-        echo "   4. Выберите Ad Hoc или App Store"
-        echo "   5. Подпишите и экспортируйте IPA"
+    if [ $? -eq 0 ]; then
+        echo "✅ Архив успешно создан!"
+        
+        # Создаем папку для IPA
+        mkdir -p build/ipa/Payload
+        
+        # Копируем приложение в папку Payload
+        cp -r build/Runner.xcarchive/Products/Applications/Runner.app build/ipa/Payload/
+        
+        # Создаем IPA файл
+        echo "📦 Создаем IPA файл..."
+        cd build/ipa
+        zip -r "${BUILD_NAME}.ipa" Payload/
+        
+        if [ $? -eq 0 ]; then
+            echo "✅ IPA файл успешно создан!"
+            
+            # Копируем в папку builds
+            cp "${BUILD_NAME}.ipa" ../../../builds/
+            
+            # Показываем информацию о файле
+            echo "📱 Файл: builds/${BUILD_NAME}.ipa"
+            echo "📏 Размер: $(du -h "${BUILD_NAME}.ipa" | cut -f1)"
+            echo "📍 Расположение: $(pwd)/../../../builds/${BUILD_NAME}.ipa"
+            
+            echo "🎉 Сборка завершена успешно!"
+        else
+            echo "❌ Ошибка при создании IPA файла"
+            exit 1
+        fi
+        
+        cd ../..
     else
-        echo "❌ Приложение не найдено в build/ios/iphoneos/Runner.app"
+        echo "❌ Ошибка при создании архива"
+        exit 1
     fi
     
-    echo "🎉 Сборка завершена успешно!"
+    cd ..
 else
     echo "❌ Ошибка при сборке iOS приложения"
     exit 1
