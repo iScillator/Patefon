@@ -1,0 +1,128 @@
+# Базовая платформа для патефона
+# Размеры: 300x200x15 мм
+# Материал: Пластик/дерево
+# Монтажные отверстия для всех компонентов
+
+# Основная платформа
+solid base_platform
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 0
+      vertex 300 0 0
+      vertex 300 200 0
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0 0 0
+      vertex 300 200 0
+      vertex 0 200 0
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 0 -15
+      vertex 0 200 -15
+      vertex 300 200 -15
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 0 0 -15
+      vertex 300 200 -15
+      vertex 300 0 -15
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 0 0 -15
+      vertex 300 0 -15
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0 0 0
+      vertex 300 0 -15
+      vertex 300 0 0
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0 200 0
+      vertex 300 200 0
+      vertex 300 200 -15
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0 200 0
+      vertex 300 200 -15
+      vertex 0 200 -15
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 0 0
+      vertex 0 200 0
+      vertex 0 200 -15
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 0 0 0
+      vertex 0 200 -15
+      vertex 0 0 -15
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 300 0 0
+      vertex 300 0 -15
+      vertex 300 200 -15
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 300 0 0
+      vertex 300 200 -15
+      vertex 300 200 0
+    endloop
+  endfacet
+endsolid base_platform
+
+# Монтажные отверстия для кольцевого адаптера (центр платформы)
+solid ring_adapter_mount
+  facet normal 0 0 1
+    outer loop
+      vertex 150 100 0
+      vertex 174 100 0
+      vertex 174 124 0
+    endloop
+  endfacet
+  # ... дополнительные грани для цилиндрического отверстия
+endsolid ring_adapter_mount
+
+# Монтажные отверстия для тонарма
+solid tonearm_mount
+  facet normal 0 0 1
+    outer loop
+      vertex 50 150 0
+      vertex 70 150 0
+      vertex 70 170 0
+    endloop
+  endfacet
+  # ... дополнительные грани
+endsolid tonearm_mount
+
+# Монтажные отверстия для мотора
+solid motor_mount
+  facet normal 0 0 1
+    outer loop
+      vertex 250 50 0
+      vertex 270 50 0
+      vertex 270 70 0
+    endloop
+  endfacet
+  # ... дополнительные грани
+endsolid motor_mount
